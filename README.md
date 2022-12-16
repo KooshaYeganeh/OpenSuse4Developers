@@ -7,13 +7,27 @@
 ## Install VsCode
 *1- It is true that Vim is the best text editor, but if the number of lines of your code increases and you need to open and edit many files (especially in web applications), vscode will help you.*
 
-1- `sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc`
 
-2- `sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/vscode.repo'`
 
-3- `sudo zypper refresh`
+{
+    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
-4- `sudo zypper install code`
+}
+
+{
+
+    sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/vscode.repo'
+
+}
+
+{ 
+    sudo zypper refresh
+}
+
+{
+
+    sudo zypper install code
+}
 
 
 
