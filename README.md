@@ -1,5 +1,5 @@
 # OpenSuse4Developers
-Everything you need as a developer on OpenSuse Leap 15.3
+*Everything you need as a developer on OpenSuse Leap 15.3*
 
 
 ![OpenSuse](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2Fi9arhctym0y41.jpg&f=1&nofb=1&ipt=aa5b5bb4e4c31aed02e822d4a664e6bbe1c7490319d1ea1aa6d2be2bb04112fe&ipo=images)
@@ -20,8 +20,8 @@ Everything you need as a developer on OpenSuse Leap 15.3
 ## Install Docker
 
 
-1- `sudo zypper install -y docker`
-2- `sudo systemctl start docker`
+1- `sudo zypper install -y docker`  
+2- `sudo systemctl start docker`  
 3- `sudo systemctl enable docker`
 
 
@@ -104,12 +104,12 @@ sudo zypper install git
 
 ## MariaDB
 
-`sudo rpm --import https://yum.mariadb.org/RPM-GPG-KEY-MariaDB`
-`sudo zypper --gpg-auto-import-keys refresh`
-`sudo zypper addrepo --gpgcheck --refresh https://yum.mariadb.org/10.7/opensuse/15/x86_64 mariadb`
+`sudo rpm --import https://yum.mariadb.org/RPM-GPG-KEY-MariaDB`  
+`sudo zypper --gpg-auto-import-keys refresh`  
+`sudo zypper addrepo --gpgcheck --refresh https://yum.mariadb.org/10.7/opensuse/15/x86_64 mariadb`  
 
-`sudo zypper refresh`
-sudo zypper install MariaDB-server MariaDB-client
+`sudo zypper refresh`  
+`sudo zypper install MariaDB-server MariaDB-client`
 
 
 ## Nginx
