@@ -10,6 +10,7 @@
 
 
 {
+
     sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
 }
@@ -21,7 +22,9 @@
 }
 
 { 
+
     sudo zypper refresh
+
 }
 
 {
