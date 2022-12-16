@@ -50,9 +50,11 @@ sudo systemctl enable docker
 ## vundle
 *These are my personal settings for the Vim editor and are set for programming with Python. In order for you to have your own settings, you must first install vundle and then install your settings and plugins.*
 
-`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+➜  ~ ```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
 
-{
+```
     set nocompatible              " required
     filetype off                  " required
 
@@ -115,7 +117,7 @@ sudo systemctl enable docker
 
 
 
-}
+```
 
 
 ## git
