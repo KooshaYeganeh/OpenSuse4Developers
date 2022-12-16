@@ -12,14 +12,12 @@
 
 ``` 
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-
 ```
 
 
 
 ```
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/vscode.repo'
-
 ```
 
 
@@ -38,9 +36,15 @@ sudo zypper install code
 ## Install Docker
 
 
-1- `sudo zypper install -y docker`  
-2- `sudo systemctl start docker`  
-3- `sudo systemctl enable docker`
+```
+sudo zypper install -y docker
+```
+```
+sudo systemctl start docker
+```
+```
+sudo systemctl enable docker
+```
 
 
 ## vundle
@@ -117,22 +121,32 @@ sudo zypper install code
 ## git
 
 
+```
 sudo zypper install git
-
+```
 
 ## MariaDB
 
-`sudo rpm --import https://yum.mariadb.org/RPM-GPG-KEY-MariaDB`  
-`sudo zypper --gpg-auto-import-keys refresh`  
-`sudo zypper addrepo --gpgcheck --refresh https://yum.mariadb.org/10.7/opensuse/15/x86_64 mariadb`  
-
-`sudo zypper refresh`  
-`sudo zypper install MariaDB-server MariaDB-client`
+```sudo rpm --import https://yum.mariadb.org/RPM-GPG-KEY-MariaDB```
+```
+sudo zypper --gpg-auto-import-keys refresh
+```  
+```
+sudo zypper addrepo --gpgcheck --refresh https://yum.mariadb.org/10.7/opensuse/15/x86_64 mariadb
+```
+```
+sudo zypper refresh
+```  
+```
+sudo zypper install MariaDB-server MariaDB-client
+```
 
 
 ## Nginx
 
-`sudo zypper install nginx`
+```
+sudo zypper install nginx
+```
 
 
 ## Multimedia Codec
@@ -140,10 +154,16 @@ sudo zypper install git
 *After installing OpenSuse, we often see an error (h256 codec) that does not allow us to play videos.
 To solve this problem, we can either install VLC or follow the steps below:*
 
-`sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/' packman`
+```
+sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/' packman
+```
+```
+sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/' packman
+```
+```
+sudo zypper refresh
+```
 
-`sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/' packman`
-
-`sudo zypper refresh`
-
-`sudo zypper dist-upgrade --from packman --allow-vendor-change`
+```
+sudo zypper dist-upgrade --from packman --allow-vendor-change
+```
