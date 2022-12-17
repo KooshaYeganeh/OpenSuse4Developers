@@ -155,7 +155,7 @@ We add these lines to the config File:
 ```
 [client]
 user=koosha
-password=Koosha_10203
+password=10203
 ```
 ## Nginx
 
@@ -163,7 +163,9 @@ password=Koosha_10203
 sudo zypper install nginx
 ```
 
-**Note : The default path of static files in the Nginix web server is a little different from other Linuxes. In most Linuxes, it is in the /var/www/nginx but  in OpenSuse it is in the  /srv/www/htdocs path.**
+**Note : The default path of static files in the Nginix web server is a 
+little different from other Linuxes. In most Linuxes, it is in the `/var/www/nginx`
+but in OpenSuse it is in the  `/srv/www/htdocs` path.**
 
 
 ## Multimedia Codec
