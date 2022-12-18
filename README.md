@@ -186,3 +186,29 @@ sudo zypper refresh
 ```
 sudo zypper dist-upgrade --from packman --allow-vendor-change
 ```
+
+## Install TLP for better power management
+
+```
+sudo zypper install tlp tlp-rdw
+```
+```
+sudo systemctl enable tlp
+```
+
+## configure /tmp
+
+*In OpenSuse, the contents of the /tmp directory are not deleted by default every boot,
+if you want this directory to be deleted, we create a tmp.conf file in the /etc/tmpfiles.d path.*
+
+```
+vi /etc/tmpfiles.d/tmp.conf
+```
+*add this Line*
+```
+D /tmp 1777 root root -
+```
+or
+
+*Or in GUI you can chnage setting from the path system_setttng -> privacy -> purge Trash and Temporary Files -> purge After *
+
