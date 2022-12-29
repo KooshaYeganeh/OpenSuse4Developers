@@ -52,7 +52,7 @@ sudo zypper refresh
 
 
 ```
-sudo zypper install code
+sudo zypper -n install code
 ```
 
 
@@ -159,7 +159,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ![Git](https://1000logos.net/wp-content/uploads/2020/08/Git-Logo-500x313.png)
 
 ```
-sudo zypper install git
+sudo zypper -n install git
 ```
 
 
@@ -186,7 +186,7 @@ sudo zypper refresh
 ```  
 
 ```
-sudo zypper install MariaDB-server MariaDB-client
+sudo zypper -n install MariaDB-server MariaDB-client
 ```
 
 **Note : To add the user and password in MariaDB's config file 
@@ -253,7 +253,7 @@ sudo zypper dist-upgrade --from packman --allow-vendor-change
 ## Install TLP for better power management
 
 ```
-sudo zypper install tlp tlp-rdw
+sudo zypper -n install tlp tlp-rdw
 ```
 
 ```
@@ -290,7 +290,7 @@ or
 ![clamAV](https://logodix.com/logo/1583401.png)
 
 ```
-sudo zypper install pcre-devel clamav clamav-database clamav-nodb clamz
+sudo zypper -n install pcre-devel clamav clamav-database clamav-nodb clamz
 ```
 
 **Updating virus database signatures**
@@ -327,7 +327,7 @@ sudo zypper -n install rkhunter
 ### Malware Detect (Maldet)
 
 ```
-sudo zypper install -n wget
+sudo zypper -n install wget
 ```
 
 ```
@@ -611,7 +611,7 @@ chmod 0700 install.sh
 
 
 ```
-sudo zypper install munin
+sudo zypper -n install munin
 ```
 
 
