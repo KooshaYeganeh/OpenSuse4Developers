@@ -153,7 +153,8 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
 
-## git
+
+## Git
 
 ![Git](https://git-scm.com/images/logos/2color-lightbg@2x.png)
 
@@ -161,11 +162,15 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 sudo zypper install git
 ```
 
+
+
+
 ## MariaDB
 
 ![mariadb](https://www.ubuntupit.com/wp-content/uploads/2019/06/Mariadb.jpg)
 
-```sudo rpm --import https://yum.mariadb.org/RPM-GPG-KEY-MariaDB```
+```
+sudo rpm --import https://yum.mariadb.org/RPM-GPG-KEY-MariaDB```
 ```
 sudo zypper --gpg-auto-import-keys refresh
 ```  
@@ -265,6 +270,8 @@ or
 
 
 ## Security
+
+![Server](https://wallpapercave.com/dwp1x/wp3797698.jpg)
 
 If you are a programmer and you have a suse virtual server for your work
 and you want to install Package tcp wrappers on your server, 
@@ -405,7 +412,7 @@ maldet -u
 
 
 
-### lynis
+### Lynis
 
 > Lynis is a battle-tested security tool for systems running Linux, macOS, or Unix-based operating system. It performs an extensive health scan of your systems to support system hardening and compliance testing
 
@@ -414,7 +421,7 @@ sudo zypper -n install lynis
 ```
 
 
-### fail2ban
+### Fail2ban
 
 > Fail2ban is an intrusion prevention software framework. Written in the Python programming language, it is designed to prevent against brute-force attacks. It is able to run on POSIX systems that have an interface to a packet-control system or firewall installed locally, such as iptables or TCP Wrapper
 
@@ -466,7 +473,7 @@ sudo zypper -n install ecryptfs-utils
 
 
 
-### aide
+### Aide
 
 > AIDE (Advanced Intrusion Detection Environment) is a small yet powerful, free open source intrusion detection tool, that uses predefined rules to check file and directory integrity in Unix-like operating systems such as Linux. It is an independent static binary for simplified client/server monitoring configurations.
 
