@@ -589,7 +589,7 @@ chmod 0700 install.sh
 
 ### Monitoring
 
-[munin](https://munin-monitoring.org/assets/img/screenshot.png)
+![munin](https://munin-monitoring.org/assets/img/screenshot.png)
 
 > Munin is a networked resource monitoring tool that can help analyze resource trends and "what just happened to kill our performance?" problems. It is designed to be very plug and play. A default installation provides a lot of graphs with almost no work
 
