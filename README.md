@@ -26,7 +26,10 @@ sudo vi ~/.bashrc
 add **exec zsh** to end of Line and write and quit.
 
 
-## Install VsCode
+## VsCode
+
+[vscode](./images/vscode.png)
+
 *1- It is true that Vim is the best text editor, but if the number of lines of your code increases and you need to open and edit many files (especially in web applications), vscode will help you.*
 
 
