@@ -75,7 +75,7 @@ sudo systemctl enable docker
 
 ## Vim and Vundle
 
-![vim](./images/vim.png)
+![vim](https://cdn.icon-icons.com/icons2/2699/PNG/512/vim_logo_icon_169260.png)
 
 ```
 sudo zypper -n install vim
