@@ -63,7 +63,7 @@ sudo zypper install code
 ![Docker](https://logos-world.net/wp-content/uploads/2021/02/Docker-Symbol.png)
 
 ```
-sudo zypper install -y docker
+sudo zypper -n install docker
 ```
 ```
 sudo systemctl start docker
@@ -172,20 +172,26 @@ sudo zypper install git
 ```
 sudo rpm --import https://yum.mariadb.org/RPM-GPG-KEY-MariaDB```
 ```
+
+```
 sudo zypper --gpg-auto-import-keys refresh
 ```  
+
 ```
 sudo zypper addrepo --gpgcheck --refresh https://yum.mariadb.org/10.7/opensuse/15/x86_64 mariadb
 ```
+
 ```
 sudo zypper refresh
 ```  
+
 ```
 sudo zypper install MariaDB-server MariaDB-client
 ```
 
 **Note : To add the user and password in MariaDB's config file 
 (so that you don't have to enter the user and password every time in your system) you musy do This :**
+
 
 ```
 sudo vi /etc/my.cnf
@@ -203,7 +209,6 @@ password=10203
 
 ![Ngninx](https://logos-download.com/wp-content/uploads/2016/09/Nginx_logo.png)
 
-[Nginx](https://1000logos.net/wp-content/uploads/2020/08/Nginx-Logo.png)
 
 
 ```
@@ -232,9 +237,11 @@ To solve this problem, we can either install VLC or follow the steps below:*
 ```
 sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/' packman
 ```
+
 ```
 sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/' packman
 ```
+
 ```
 sudo zypper refresh
 ```
@@ -248,6 +255,7 @@ sudo zypper dist-upgrade --from packman --allow-vendor-change
 ```
 sudo zypper install tlp tlp-rdw
 ```
+
 ```
 sudo systemctl enable tlp
 ```
@@ -260,6 +268,7 @@ if you want this directory to be deleted, we create a tmp.conf file in the /etc/
 ```
 vi /etc/tmpfiles.d/tmp.conf
 ```
+
 *add this Line*
 ```
 D /tmp 1777 root root -
