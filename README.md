@@ -212,3 +212,325 @@ or
 
 *Or in GUI you can chnage setting from the path system_setttng -> privacy -> purge Trash and Temporary Files -> purge After *
 
+
+## Security
+
+If you are a programmer and you have a suse virtual server for your work
+and you want to install Package tcp wrappers on your server, 
+in this case Sousse works like Ubuntu and the name of Package tcp wrappers is different from other RPMs.
+
+
+### ClamAV
+
+```
+sudo zypper install pcre-devel clamav clamav-database clamav-nodb clamz
+```
+
+**Updating virus database signatures**
+
+```
+sudo freshclam
+```
+
+> ٔImportant Note : If an error occurs while updating the signatures, you can download the database separately and place it in your specified path.
+
+```
+wget  https://database.clamav.net/daily.cvd
+```
+
+```
+sudo mkdir /var/lib/clamav
+```
+
+```
+mv daily.cvd /var/lib/clamav/daily.cvd
+```
+
+```
+sudo systemctl start clamav-freshclam
+```
+
+
+### RootkitHunter
+
+```
+sudo zypper -n install rkhunter
+```
+
+### Malware Detect (Maldet)
+
+```
+sudo zypper install -n wget
+```
+
+```
+cd /tmp/
+```
+```
+wget http://www.rfxn.com/downloads/maldetect-current.tar.gz
+```
+```
+tar xfz maldetect-current.tar.gz
+```
+```
+cd maldetect-1.6.4
+```
+```
+./install.sh
+```
+
+```
+cd
+```
+
+**Configuring Maldet**
+
+```
+sudo vi /usr/local/maldetect/conf.maldet
+```
+
+**find the following lines and edit them to as below**
+
+```
+# To enable the email notification.
+email_alert="1"
+
+# Specify the email address on which you want to receive an email notification.
+email_addr="user@domain.com"
+
+# Enable the LMD signature autoupdate.
+autoupdate_signatures="1"
+
+# Enable the automatic updates of the LMD installation.
+autoupdate_version="1"
+
+# Enable the daily automatic scanning.
+cron_daily_scan="1"
+
+# Allows non-root users to perform scans.
+scan_user_access="1"
+ 
+# Move hits to quarantine & alert
+quarantine_hits="1"
+
+# Clean string based malware injections.
+quarantine_clean="0"
+
+# Suspend user if malware found. 
+quarantine_suspend_user="1"
+
+# Minimum userid value that be suspended
+quarantine_suspend_user_minuid="500"
+
+# Enable Email Alerting
+email_alert="1"
+
+# Email Address in which you want to receive scan reports
+email_addr="you@domain.com"
+
+# Use with ClamAV
+scan_clamscan="1"
+
+# Enable scanning for root-owned files. Set 1 to disable.
+scan_ignore_root="0"
+```
+
+**Updating Maldet**
+*First run the following command to create the correct paths for the logged-in user; you may have issues updating without doing this.*
+
+``` 
+sudo /usr/local/sbin/maldet --mkpubpaths
+```
+
+**To update the Maldet virus definitions database, execute the following command:**
+
+```
+maldet -u
+```
+
+
+
+
+
+### lynis
+
+> Lynis is a battle-tested security tool for systems running Linux, macOS, or Unix-based operating system. It performs an extensive health scan of your systems to support system hardening and compliance testing
+
+```
+sudo zypper -n install lynis
+```
+
+
+### fail2ban
+
+> Fail2ban is an intrusion prevention software framework. Written in the Python programming language, it is designed to prevent against brute-force attacks. It is able to run on POSIX systems that have an interface to a packet-control system or firewall installed locally, such as iptables or TCP Wrapper
+
+```
+sudo zypper -n install fail2ban
+```
+
+
+### Vim 
+
+> Vim is a free and open-source, screen-based text editor program
+
+```
+sudo zypper -n install vim
+```
+
+
+### Git
+
+> Git is free and open source software for distributed version control: tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows
+
+```
+sudo zypper -n install git
+```
+
+
+
+### TCP wrappers
+
+> TCP Wrapper is a host-based networking ACL system, used to filter network access to Internet Protocol servers on operating systems such as Linux or BSD. It allows host or subnetwork IP addresses, names and/or ident query replies, to be used as tokens on which to filter for access control purposes
+
+```
+sudo zypper -n install tcpd
+```
+
+### Ecryptfs-utils
+
+> ecryptfs cryptographic filesystem (utilities)
+eCryptfs is a POSIX-compliant enterprise-class stacked cryptographic filesystem for Linux. 
+
+
+```
+sudo zypper -n install ecryptfs-utils
+```
+
+
+
+
+
+### aide
+
+> AIDE (Advanced Intrusion Detection Environment) is a small yet powerful, free open source intrusion detection tool, that uses predefined rules to check file and directory integrity in Unix-like operating systems such as Linux. It is an independent static binary for simplified client/server monitoring configurations.
+
+
+```
+sudo zypper -n install aide
+```
+
+
+### psad
+
+
+[psad](https://www.cipherdyne.org/images/psad.png)
+> psad is a collection of three lightweight system daemons (two main daemons and one helper daemon) that run on Linux machines and analyze iptables log messages to detect port scans and other suspicious traffic. A typical deployment is to run psad on the iptables firewall where it has the fastest access to log data.
+
+```
+mkdir /tmp/psad
+```
+
+```
+cd /tmp/psad
+```
+
+```
+wget http://www.cipherdyne.org/psad/download/psad-2.2-1.x86_64.rpm
+```
+
+```
+rpm -ivh psad-2.2-1.x86_64.rpm 
+```
+
+```
+cd ..
+```
+
+```
+rm -rf psad
+```
+
+**Edit the PSAD configuration file.**
+
+```
+sudo vi /etc/psad/psad.conf
+```
+
+**EMAIL_ADDRESSES** - change this to your email address.
+**HOSTNAME** - this is set during install - but double check and change to a FQDN if needed.
+**ENABLE_AUTO_IDS_EMAILS** - set this to Y if you would like to receive email notifications of intrusions that are detected.
+
+**Add iptables LOG rules for both IPv4 and IPv6.**
+
+```
+iptables -A INPUT -j LOG
+```
+```
+iptables -A FORWARD -j LOG
+```
+```
+ip6tables -A INPUT -j LOG
+```
+```
+ip6tables -A FORWARD -j LOG
+```
+
+**Reload and update PSAD.**
+
+```
+psad -R
+```
+```
+psad --sig-update
+```
+```
+psad -H
+```
+
+Note : To check the status of PSAD, open a Terminal Window and enter :
+
+```
+psad --Status
+```
+
+### sshfs
+
+> SSHFS itself is a file system in user space (FUSE) that uses the SSH File Transfer Protocol (SFTP) to mount a remote file system. The sshfs command is a client tool for using SSHFS to mount a remote file system from another server locally on your machine.
+
+
+```
+sudo zypper -n install sshfs
+```
+
+### MySQL Tuner
+
+> If you have a MariaDB database on your server, I suggest you use this script to diagnose configuration problems and increase stability.
+
+
+MainLink : https://github.com/major/MySQLTuner-perl
+Download Link : https://github.com/major/MySQLTuner-perl/archive/refs/heads/master.zip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
