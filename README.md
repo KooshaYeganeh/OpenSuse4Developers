@@ -2,7 +2,7 @@
 *Everything you need as a developer on OpenSuse Leap 15.3*
 
 
-![OpenSuse](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2Fi9arhctym0y41.jpg&f=1&nofb=1&ipt=aa5b5bb4e4c31aed02e822d4a664e6bbe1c7490319d1ea1aa6d2be2bb04112fe&ipo=images)
+![OpenSuse](./images/opensuse.jpg)
 
 
 
@@ -57,6 +57,7 @@ sudo zypper install code
 
 ## Install Docker
 
+[Docker](./images/docker.png)
 
 ```
 sudo zypper install -y docker
