@@ -28,7 +28,7 @@ add **exec zsh** to end of Line and write and quit.
 
 ## VsCode
 
-[vscode](./images/vscode.png)
+![vscode](./images/vscode.png)
 
 *1- It is true that Vim is the best text editor, but if the number of lines of your code increases and you need to open and edit many files (especially in web applications), vscode will help you.*
 
@@ -60,7 +60,7 @@ sudo zypper install code
 
 ## Install Docker
 
-[Docker](./images/docker.png)
+![Docker](./images/docker.png)
 
 ```
 sudo zypper install -y docker
@@ -73,7 +73,14 @@ sudo systemctl enable docker
 ```
 
 
-## vundle
+## Vim and Vundle
+
+![vim](./images/vim.png)
+
+```
+sudo zypper -n install vim
+```
+
 *These are my personal settings for the Vim editor and are set for programming with Python. In order for you to have your own settings, you must first install vundle and then install your settings and plugins.*
 
 ```
@@ -148,12 +155,15 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 ## git
 
+![Git](./images/Git.png)
 
 ```
 sudo zypper install git
 ```
 
 ## MariaDB
+
+![mariadb](./iamges/mariadb.jpeg)
 
 ```sudo rpm --import https://yum.mariadb.org/RPM-GPG-KEY-MariaDB```
 ```
@@ -186,6 +196,8 @@ password=10203
 
 ## Nginx
 
+![Ngninx](nginx.png)
+
 [Nginx](https://1000logos.net/wp-content/uploads/2020/08/Nginx-Logo.png)
 
 
@@ -200,7 +212,7 @@ but in OpenSuse it is in the  `/srv/www/htdocs` path.**
 
 ## Apache
 
-[Apache](https://www.apache.org/foundation/press/kit/asf_logo.png)
+![Apache](https://www.apache.org/foundation/press/kit/asf_logo.png)
 
 ```
 sudo zypper -n install apache2
@@ -261,7 +273,7 @@ in this case Sousse works like Ubuntu and the name of Package tcp wrappers is di
 
 ### ClamAV
 
-[clamAV](https://logodix.com/logo/1583401.png)
+![clamAV](https://logodix.com/logo/1583401.png)
 
 ```
 sudo zypper install pcre-devel clamav clamav-database clamav-nodb clamz
