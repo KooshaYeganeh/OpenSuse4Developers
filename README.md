@@ -6,7 +6,7 @@
 
 
 
-## Zsh and ohmyzsh
+## Zsh and oh-my-zsh 
 
 
 ```
