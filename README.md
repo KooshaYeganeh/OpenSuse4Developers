@@ -156,7 +156,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 ## Git
 
-![Git](https://git-scm.com/images/logos/2color-lightbg@2x.png)
+![Git](https://1000logos.net/wp-content/uploads/2020/08/Git-Logo-500x313.png)
 
 ```
 sudo zypper install git
@@ -167,7 +167,7 @@ sudo zypper install git
 
 ## MariaDB
 
-![mariadb](https://www.ubuntupit.com/wp-content/uploads/2019/06/Mariadb.jpg)
+![mariadb](https://whatthelogo.com/storage/logos/mariadb-273522.webp)
 
 ```
 sudo rpm --import https://yum.mariadb.org/RPM-GPG-KEY-MariaDB```
@@ -520,14 +520,14 @@ cd ..
 rm -rf psad
 ```
 
-**Edit the PSAD configuration file.**
+*Edit the PSAD configuration file.*
 
 ```
 sudo vi /etc/psad/psad.conf
 ```
 
-**EMAIL_ADDRESSES** - change this to your email address.
-**HOSTNAME** - this is set during install - but double check and change to a FQDN if needed.
+**EMAIL_ADDRESSES** - change this to your email address.  
+**HOSTNAME** - this is set during install - but double check and change to a FQDN if needed.  
 **ENABLE_AUTO_IDS_EMAILS** - set this to Y if you would like to receive email notifications of intrusions that are detected.
 
 **Add iptables LOG rules for both IPv4 and IPv6.**
@@ -603,11 +603,12 @@ chmod 0700 install.sh
 
 ### Monitoring
 
+#### Minun
+
 ![munin](https://munin-monitoring.org/assets/img/screenshot.png)
 
 > Munin is a networked resource monitoring tool that can help analyze resource trends and "what just happened to kill our performance?" problems. It is designed to be very plug and play. A default installation provides a lot of graphs with almost no work
 
-**Munin**
 
 ```
 sudo zypper install munin
