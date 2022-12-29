@@ -275,16 +275,14 @@ D /tmp 1777 root root -
 ```
 or
 
-*Or in GUI you can chnage setting from the path system_setttng -> privacy -> purge Trash and Temporary Files -> purge After *
+*Or in GUI you can chnage setting from the path system_setttng -> privacy -> purge Trash and Temporary Files -> purge After*
 
 
 ## Security
 
 ![Server](https://wallpapercave.com/dwp1x/wp3797698.jpg)
 
-If you are a programmer and you have a suse virtual server for your work
-and you want to install Package tcp wrappers on your server, 
-in this case Sousse works like Ubuntu and the name of Package tcp wrappers is different from other RPMs.
+**If you are a programmer and you have a Sousse virtual server and you want to set it up for programming and security, you can use the following tools:**
 
 
 ### ClamAV
