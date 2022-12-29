@@ -4,6 +4,28 @@
 
 ![OpenSuse](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.redd.it%2Fi9arhctym0y41.jpg&f=1&nofb=1&ipt=aa5b5bb4e4c31aed02e822d4a664e6bbe1c7490319d1ea1aa6d2be2bb04112fe&ipo=images)
 
+
+
+## Zsh and ohmyzsh
+
+
+```
+sudo zypper -n install zsh
+```
+
+```
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+```
+
+For the image to have zsh from the moment you start, add a line to the settings of the bashrc file
+
+```
+sudo vi ~/.bashrc
+```
+
+add **exec zsh** to end of Line and write and quit.
+
+
 ## Install VsCode
 *1- It is true that Vim is the best text editor, but if the number of lines of your code increases and you need to open and edit many files (especially in web applications), vscode will help you.*
 
@@ -157,10 +179,11 @@ We add these lines to the config File:
 user=koosha
 password=10203
 ```
+
 ## Nginx
 
 ```
-sudo zypper install nginx
+sudo zypper -n install nginx
 ```
 
 **Note : The default path of static files in the Nginix web server is a 
@@ -377,7 +400,9 @@ sudo zypper -n install fail2ban
 ```
 sudo zypper -n install vim
 ```
-
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
 
 ### Git
 
@@ -424,7 +449,6 @@ sudo zypper -n install aide
 ### psad
 
 
-[psad](https://www.cipherdyne.org/images/psad.png)
 > psad is a collection of three lightweight system daemons (two main daemons and one helper daemon) that run on Linux machines and analyze iptables log messages to detect port scans and other suspicious traffic. A typical deployment is to run psad on the iptables firewall where it has the fastest access to log data.
 
 ```
