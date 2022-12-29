@@ -2,7 +2,7 @@
 *Everything you need as a developer on OpenSuse Leap 15.3*
 
 
-![OpenSuse](./images/opensuse.jpg)
+![OpenSuse](https://wallpapertag.com/wallpaper/middle/8/a/2/826512-opensuse-wallpaper-1920x1080-samsung.jpg)
 
 
 
@@ -28,7 +28,7 @@ add **exec zsh** to end of Line and write and quit.
 
 ## VsCode
 
-![vscode](./images/vscode.png)
+![vscode](https://raw.githubusercontent.com/github/explore/bbd48b997e8d0bef63f676eca4da5e1f76487b56/topics/visual-studio-code/visual-studio-code.png)
 
 *1- It is true that Vim is the best text editor, but if the number of lines of your code increases and you need to open and edit many files (especially in web applications), vscode will help you.*
 
@@ -60,7 +60,7 @@ sudo zypper install code
 
 ## Install Docker
 
-![Docker](./images/docker.png)
+![Docker](https://logos-world.net/wp-content/uploads/2021/02/Docker-Symbol.png)
 
 ```
 sudo zypper install -y docker
@@ -155,7 +155,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 ## git
 
-![Git](./images/Git.png)
+![Git](https://git-scm.com/images/logos/2color-lightbg@2x.png)
 
 ```
 sudo zypper install git
@@ -163,7 +163,7 @@ sudo zypper install git
 
 ## MariaDB
 
-![mariadb](./iamges/mariadb.jpeg)
+![mariadb](https://www.ubuntupit.com/wp-content/uploads/2019/06/Mariadb.jpg)
 
 ```sudo rpm --import https://yum.mariadb.org/RPM-GPG-KEY-MariaDB```
 ```
@@ -196,7 +196,7 @@ password=10203
 
 ## Nginx
 
-![Ngninx](nginx.png)
+![Ngninx](https://logos-download.com/wp-content/uploads/2016/09/Nginx_logo.png)
 
 [Nginx](https://1000logos.net/wp-content/uploads/2020/08/Nginx-Logo.png)
 
@@ -478,6 +478,7 @@ sudo zypper -n install aide
 
 ### psad
 
+![psad](http://cipherdyne.org/images/psad.png)
 
 > psad is a collection of three lightweight system daemons (two main daemons and one helper daemon) that run on Linux machines and analyze iptables log messages to detect port scans and other suspicious traffic. A typical deployment is to run psad on the iptables firewall where it has the fastest access to log data.
 
