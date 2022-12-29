@@ -182,6 +182,9 @@ password=10203
 
 ## Nginx
 
+[Nginx](https://1000logos.net/wp-content/uploads/2020/08/Nginx-Logo.png)
+
+
 ```
 sudo zypper -n install nginx
 ```
@@ -189,6 +192,15 @@ sudo zypper -n install nginx
 **Note : The default path of static files in the Nginix web server is a 
 little different from other Linuxes. In most Linuxes, it is in the `/var/www/nginx`
 but in OpenSuse it is in the  `/srv/www/htdocs` path.**
+
+
+## Apache
+
+[Apache](https://www.apache.org/foundation/press/kit/asf_logo.png)
+
+```
+sudo zypper -n install apache2
+```
 
 
 ## Multimedia Codec
@@ -244,6 +256,8 @@ in this case Sousse works like Ubuntu and the name of Package tcp wrappers is di
 
 
 ### ClamAV
+
+[clamAV](https://logodix.com/logo/1583401.png)
 
 ```
 sudo zypper install pcre-devel clamav clamav-database clamav-nodb clamz
@@ -537,8 +551,36 @@ Download Link : https://github.com/major/MySQLTuner-perl/archive/refs/heads/mast
 
 
 
+### DDOS Deflate
+
+> DoS Deflate is a lightweight bash shell script designed to assist in the process of blocking a denial of service attack. It utilizes the command below to create a list of IP addresses connected to the server, along with their total number of connections.
 
 
+```
+wget http://www.inetbase.com/scripts/ddos/install.sh
+```
+
+```
+chmod 0700 install.sh
+```
+
+```
+./install.sh
+```
+
+
+
+### Monitoring
+
+[munin](https://munin-monitoring.org/assets/img/screenshot.png)
+
+> Munin is a networked resource monitoring tool that can help analyze resource trends and "what just happened to kill our performance?" problems. It is designed to be very plug and play. A default installation provides a lot of graphs with almost no work
+
+**Munin**
+
+```
+sudo zypper install munin
+```
 
 
 
