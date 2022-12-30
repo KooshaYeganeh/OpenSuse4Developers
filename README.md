@@ -1364,3 +1364,8 @@ sudo zypper -n install munin
 [linuxcapable](https://www.linuxcapable.com/how-to-install-and-use-maldet-on-ubuntu-20-04/)
 
 [redhat](https://www.redhat.com/sysadmin/sshfs)
+
+[redelijkheid](https://www.redelijkheid.com/blog/2017/1/29/configure-nginx-as-a-secure-reverse-proxy)
+
+[linuxhandbook](https://linuxhandbook.com/nginx-reverse-proxy-docker/)
+
