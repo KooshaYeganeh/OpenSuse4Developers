@@ -1193,6 +1193,30 @@ psad --Status
 sudo zypper -n install sshfs
 ```
 
+**Use sshfs**
+
+```
+sshfs koosha@192.168.1.105:/home/koosha/Documnets ~/mnt
+```
+
+When you’re done with the remote file system, unmount it with the fusermount command:
+
+```
+fusermount -u ~/mnt
+```
+
+*Mounting a remote file system on startup*
+
+add This Lines to */etc/fstab*
+
+```
+koosha@opensuse:/home/koosha/Pictures /home/koosha/mnt sshfs
+```
+
+
+
+
+
 ### MySQL Tuner
 
 > If you have a MariaDB database on your server, I suggest you use this script to diagnose configuration problems and increase stability.
@@ -1269,3 +1293,5 @@ sudo zypper -n install munin
 [linuxize](https://linuxize.com/post/install-configure-fail2ban-on-ubuntu-20-04/)
 
 [linuxcapable](https://www.linuxcapable.com/how-to-install-and-use-maldet-on-ubuntu-20-04/)
+
+[redhat](https://www.redhat.com/sysadmin/sshfs)
