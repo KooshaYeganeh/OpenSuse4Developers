@@ -223,6 +223,8 @@ but in OpenSuse it is in the  `/srv/www/htdocs` path.**
 ### Reverse Proxy With Nginx
 
 
+![Reverse Proxy with Nginx](https://linuxhandbook.com/content/images/2020/09/reverse-proxy-1.png)
+
 **Configuring your reverse proxy**
 
 The proxy module’s proxy_pass function provides NGINX with a reverse proxy. To use proxy_pass, you must first know where you want to direct traffic. In real life, this answer varies depending upon your infrastructure, but for the purpose of this article your destination is your Python 3 fake server (located at port 8888), and not the NGINX test page.
