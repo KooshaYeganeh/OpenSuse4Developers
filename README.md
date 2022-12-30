@@ -512,9 +512,9 @@ The default Fail2ban installation comes with two configuration files, /etc/fail2
 Fail2ban reads the configuration files in the following order. Each .local file overrides the settings from the .conf file:
 
 
-*/etc/fail2ban/jail.conf*
-*/etc/fail2ban/jail.d/*.conf*
-*/etc/fail2ban/jail.local*
+*/etc/fail2ban/jail.conf*  
+*/etc/fail2ban/jail.d/*.conf*  
+*/etc/fail2ban/jail.local*  
 */etc/fail2ban/jail.d/*.local*
 
 For most users, the easiest way to configure Fail2ban is to copy the jail.conf to jail.local and modify the .local file. More advanced users can build a .local configuration file from scratch. The .local file doesn’t have to include all settings from the corresponding .conf file, only those you want to override.
@@ -726,7 +726,7 @@ ls -l /etc/hosts.allow /etc/hosts.deny
 
 The syntax of both files is the same:
 
-<services> : <clients> [: <option1> : <option2> : ...]
+services : clients : option1 : option2 : ...
 
 
 
