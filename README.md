@@ -220,6 +220,73 @@ little different from other Linuxes. In most Linuxes, it is in the `/var/www/ngi
 but in OpenSuse it is in the  `/srv/www/htdocs` path.**
 
 
+### Reverse Proxy With Nginx
+
+
+**Configuring your reverse proxy**
+
+The proxy module’s proxy_pass function provides NGINX with a reverse proxy. To use proxy_pass, you must first know where you want to direct traffic. In real life, this answer varies depending upon your infrastructure, but for the purpose of this article your destination is your Python 3 fake server (located at port 8888), and not the NGINX test page.
+
+Each web server is defined in a server block within /etc/nginx/nginx.conf. In the server, you define a location to set a specific URI. In this case, set the server’s root directory, and use the proxy_pass function to make the root of your web server a proxy to your temporary Python web server.
+
+The default NGINX configuration file, depending on your system, may interfere with this test; so before continuing, move it to a safe place:
+
+```
+sudo mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf-distro
+```
+
+Create a new /etc/nginx/nginx.conf file (indentation doesn’t matter, but semi-colons and brackets do):
+
+
+```
+worker_processes  1;
+
+events {
+    worker_connections  1024; 
+}
+    
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
+    server {
+        listen       80;
+        server_name  localhost;
+
+        location / {
+        proxy_pass http://localhost:8888/;
+            index  index.html index.htm;
+            } # end location
+        } # end server
+    } # end http
+
+
+```
+
+In real life, the value for server_name would be your fully-qualified domain name (FQDN)—such as example.com—and the value for proxy_pass would be the location you want your redirected traffic to end up. A proxy location can be referred to by its IP address or its FQDN
+
+
+**Testing your reverse proxy**
+
+Your reverse proxy has been created, so it’s time to test. Before
+restarting NGINX, test your configuration file:
+
+```
+sudo nginx -t
+```
+
+```
+sudo systemctl restart nginx
+```
+
+
+
+
+
+
+
 ## Apache
 
 ![Apache](https://www.apache.org/foundation/press/kit/asf_logo.png)
