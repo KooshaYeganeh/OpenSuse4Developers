@@ -162,6 +162,11 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 sudo zypper -n install git
 ```
 
+> Note :When you want to install git on opensuse, the opensuse package Manager also installs the graphical user interface for git. If you are not interested in the graphical interface like me, you can install git with the following command:
+
+```
+sudo zypper -n install git-core
+```
 
 
 
