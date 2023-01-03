@@ -116,7 +116,7 @@ sudo systemctl enable docker
 sudo zypper -n install vim
 ```
 
-*These are my personal settings for the Vim editor and are set for programming with Python. In order for you to have your own settings, you must first install vundle and then install your settings and plugins.*
+*These are personal settings for the Vim editor and are set for programming with Python. In order for you to have your own settings, you must first install vundle and then install your settings and plugins.*
 
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -197,8 +197,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 sudo zypper -n install git
 ```
 
-> Note :When you want to install git on opensuse, the opensuse package Manager also installs the graphical user interface for git. If you are not interested in the graphical interface like me, you can install git with the following command:
-
+> Note : When you want to install git on opensuse, the opensuse package Manager also installs the graphical user interface for git. If you are not interested in the graphical interface , you can install git with the following command:
 ```
 sudo zypper -n install git-core
 ```
@@ -237,7 +236,7 @@ sudo zypper -n install MariaDB-server MariaDB-client
 sudo vi /etc/my.cnf
 ```
 
-We add these lines to the config File:
+add these lines to the config File:
 
 ```
 [client]
