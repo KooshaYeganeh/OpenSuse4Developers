@@ -5,8 +5,7 @@
 ![OpenSuse](https://wallpapertag.com/wallpaper/middle/8/a/2/826512-opensuse-wallpaper-1920x1080-samsung.jpg)
 
 
-
-1. [Zsh and oh-my-zsh] (#Zsh and Oh-My-Zsh)
+![Zsh and oh-my-zsh] (https://github.com/KooshaYeganeh/OpenSuse4Developers#zsh-and-oh-my-zsh)
 2. [vscode] (#VsCode)
 
 
