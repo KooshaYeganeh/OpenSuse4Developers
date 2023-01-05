@@ -6,11 +6,11 @@
 
 
 
-1. [Zsh and oh-my-zsh] (#Zsh and oh-my-zsh)
+1. [Zsh and oh-my-zsh] (#Zsh and Oh-My-Zsh)
 2. [vscode] (#VsCode)
 
 
-
+<a name="Zsh and Oh-My-Zsh"></a>
 ## Zsh and oh-my-zsh 
 
 
