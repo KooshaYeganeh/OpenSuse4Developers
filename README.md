@@ -386,6 +386,29 @@ or
 *Or in GUI you can chnage setting from the path system_setttng -> privacy -> purge Trash and Temporary Files -> purge After*
 
 
+## Android Debug Bridge
+
+![ADB](https://www.freepnglogos.com/uploads/android-logo-png/android-logo-0.png)
+
+
+If you want to use ADB and Fastboot, sideload an APK or Zip, flash a custom recovery or the stock factory images, access and control your Android device using a computer, you’ll need to enable Developer Options and turn on USB Debugging. Without having them enabled, Android devices just can’t communicate with the computer. Here’s how to enable Developer Options on Android devices from different manufacturers.
+
+
+**OpenSuse Leap 15.3**
+
+```
+sudo zypper addrepo https://download.opensuse.org/repositories/hardware/openSUSE_Leap_15.3/hardware.repo
+```
+```
+sudo zypper refresh
+```
+```
+sudo zypper install android-tools
+```
+
+
+
+
 ## Security
 
 ![Server](https://wallpapercave.com/dwp1x/wp3797698.jpg)
