@@ -5,11 +5,10 @@
 ![OpenSuse](https://wallpapertag.com/wallpaper/middle/8/a/2/826512-opensuse-wallpaper-1920x1080-samsung.jpg)
 
 
-[Zsh and oh-my-zsh] (https://github.com/KooshaYeganeh/OpenSuse4Developers#zsh-and-oh-my-zsh)
-2. [vscode] (#VsCode)
+1- [oh-my-zsh](https://github.com/KooshaYeganeh/OpenSuse4Developers#zsh-and-oh-my-zsh)  
+2- [vscode] (https://github.com/KooshaYeganeh/OpenSuse4Developers#vscode)
 
 
-<a name="Zsh and Oh-My-Zsh"></a>
 ## Zsh and oh-my-zsh 
 
 
