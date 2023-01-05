@@ -6,6 +6,11 @@
 
 
 
+1. [Zsh and oh-my-zsh] (## Zsh and oh-my-zsh)
+2. [vscode] (## VsCode)
+
+
+
 ## Zsh and oh-my-zsh 
 
 
