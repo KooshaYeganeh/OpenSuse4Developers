@@ -6,7 +6,7 @@
 
 
 1- [oh-my-zsh](https://github.com/KooshaYeganeh/OpenSuse4Developers#zsh-and-oh-my-zsh)  
-2- [vscode] (https://github.com/KooshaYeganeh/OpenSuse4Developers#vscode)
+2- [vscode](https://github.com/KooshaYeganeh/OpenSuse4Developers#vscode)
 
 
 ## Zsh and oh-my-zsh 
