@@ -259,7 +259,7 @@ sudo zypper -n install MariaDB-server MariaDB-client
 ```
 
 **Note : To add the user and password in MariaDB's config file 
-(so that you don't have to enter the user and password every time in your system) you musy do This :**
+(so that you don't have to enter the user and password every time in your system) you must do This :**
 
 
 ```
@@ -270,8 +270,8 @@ add these lines to the config File:
 
 ```
 [client]
-user=koosha
-password=10203
+user=mysql user
+password=mysql password
 ```
 
 ## Nginx
