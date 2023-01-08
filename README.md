@@ -239,7 +239,7 @@ sudo zypper -n install git-core
 ![mariadb](https://whatthelogo.com/storage/logos/mariadb-273522.webp)
 
 ```
-sudo rpm --import https://yum.mariadb.org/RPM-GPG-KEY-MariaDB```
+sudo rpm --import https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 ```
 
 ```
