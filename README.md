@@ -16,9 +16,11 @@
 5- [Git](https://github.com/KooshaYeganeh/OpenSuse4Developers#git)  
 6- [MariaDB](https://github.com/KooshaYeganeh/OpenSuse4Developers#mariadb)  
 7- [Nginx](https://github.com/KooshaYeganeh/OpenSuse4Developers#nginx)  
+    - [Reverse Proxy with Nginx](https://github.com/KooshaYeganeh/OpenSuse4Developers#reverse-proxy-with-nginx)  
 8- [Apache](https://github.com/KooshaYeganeh/OpenSuse4Developers#apache)  
 9- [Multi Media codec](https://github.com/KooshaYeganeh/OpenSuse4Developers#multimedia-codec)  
-10- [Abdroid Debug Bridge](https://github.com/KooshaYeganeh/OpenSuse4Developers#android-debug-bridge)
+9- [TLP](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-tlp-for-better-power-management)  
+10- [Android Debug Bridge](https://github.com/KooshaYeganeh/OpenSuse4Developers#android-debug-bridge)
 
 ### Security
 
@@ -34,7 +36,7 @@
 10- [psad](https://github.com/KooshaYeganeh/OpenSuse4Developers#psad)    
 11- [sshfs](https://github.com/KooshaYeganeh/OpenSuse4Developers#sshfs)  
 12- [MySQL Tuner](https://github.com/KooshaYeganeh/OpenSuse4Developers#mysql-tuner)  
-13- [Change Default MariaDB Port]()  
+13- [Change Default MariaDB Port](https://github.com/KooshaYeganeh/OpenSuse4Developers#change-mariadb-default-port)  
 14- [Munin](https://github.com/KooshaYeganeh/OpenSuse4Developers#minun)
 
 ## Zsh and oh-my-zsh 
