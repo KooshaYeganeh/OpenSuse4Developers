@@ -34,7 +34,8 @@
 10- [psad](https://github.com/KooshaYeganeh/OpenSuse4Developers#psad)    
 11- [sshfs](https://github.com/KooshaYeganeh/OpenSuse4Developers#sshfs)  
 12- [MySQL Tuner](https://github.com/KooshaYeganeh/OpenSuse4Developers#mysql-tuner)  
-13- [Munin](https://github.com/KooshaYeganeh/OpenSuse4Developers#minun)
+13- [Change Default MariaDB Port]()  
+14- [Munin](https://github.com/KooshaYeganeh/OpenSuse4Developers#minun)
 
 ## Zsh and oh-my-zsh 
 
@@ -1386,6 +1387,69 @@ koosha@opensuse:/home/koosha/Pictures /home/koosha/mnt sshfs
 MainLink : https://github.com/major/MySQLTuner-perl
 Download Link : https://github.com/major/MySQLTuner-perl/archive/refs/heads/master.zip
 
+
+
+### Change MariaDB Default Port
+
+
+1- To change the port in the MySkill service, comment out the line that is the port and enter the desired port.
+ 
+2- If you have a web application, it is better to separate the database server from the application server. In this case, the binding address must be defined for this issue.
+
+> My Configs:
+
+```
+sudo vi /etc/my.cnf.d/server.cnf
+```
+
+```
+#
+# These groups are read by MariaDB server.
+# Use it for options that only the server (but not clients) should see
+#
+# See the examples of server my.cnf files in /usr/share/mysql/
+#
+
+# this is read by the standalone daemon and embedded servers
+[server]
+
+# this is only for the mysqld standalone daemon
+[mysqld]
+
+#
+# * Galera-related settings
+#
+[galera]
+# Mandatory settings
+#wsrep_on=ON
+#wsrep_provider=
+#wsrep_cluster_address=
+#binlog_format=row
+#default_storage_engine=InnoDB
+#innodb_autoinc_lock_mode=2
+#
+# Allow server to accept connections on all interfaces.
+#
+bind-address=192.168.1.100
+port = 3380
+#
+# Optional setting
+#wsrep_slave_threads=1
+#innodb_flush_log_at_trx_commit=0
+
+# this is only for embedded server
+[embedded]
+
+# This group is only read by MariaDB servers, not by MySQL.
+# If you use the same .cnf file for MySQL and MariaDB,
+# you can put MariaDB-only options here
+[mariadb]
+
+# This group is only read by MariaDB-10.5 servers.
+# If you use the same .cnf file for MariaDB of different versions,
+# use this group for options that older servers don't understand
+[mariadb-10.5]
+```
 
 
 ### DDOS Deflate
