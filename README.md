@@ -30,6 +30,7 @@
 - [**Lynis**](https://github.com/KooshaYeganeh/OpenSuse4Developers#lynis)  
 - [**Fail2Ban**](https://github.com/KooshaYeganeh/OpenSuse4Developers#fail2ban)  
 - [**TcpWrapper**](https://github.com/KooshaYeganeh/OpenSuse4Developers#tcp-wrappers)  
+- [**HAProxy Enterprise**]()  
 - [**EcryptFs**](https://github.com/KooshaYeganeh/OpenSuse4Developers#ecryptfs-utils)  
 - [**Aide**](https://github.com/KooshaYeganeh/OpenSuse4Developers#aide)  
 - [**TripWire**](https://github.com/KooshaYeganeh/OpenSuse4Developers#tripwire)    
@@ -991,6 +992,46 @@ vsftpd : 10.0.1.
 ```
 
 
+### HAProxy Enterprise
+
+The HAProxy Enterprise software load balancer spreads traffic across a pool of healthy servers, allowing you to scale out your capacity for handling concurrent requests. You can then easily answer the demand, while also improving performance and availability.
+
+![Haproxy Enterprise Load Balancing](https://cdn.haproxy.com/documentation/hapee/latest/assets/with-a-loadbalancer-d62b460dfabe2f4cffbb814c3411911adc891979e9ee6e05705d6531263428ff.png)
+
+1- First Go to This Link and Get Trial:
+
+[trial](https://www.haproxy.com/downloads/hapee-trial/)
+
+2- To install HAProxy Enterprise, run the following command, replacing <HAProxy Enterprise Key> with the key you were given when you [registered](https://www.haproxy.com/downloads/hapee-trial/).
+
+```
+wget https://www.haproxy.com/static/install_haproxy_enterprise.sh &&
+   sudo bash ./install_haproxy_enterprise.sh 2.6r1 <HAProxy Enterprise key>
+```
+
+3- Enable and Start
+
+```
+sudo systemctl enable hapee-2.6-lb
+```
+```
+sudo systemctl start hapee-2.6-lb
+```
+
+**Install additional modules**
+
+```
+zypper search hapee-2.6r1
+```
+```
+zypper search hapee-extras
+```
+
+**Install a module**
+
+```
+sudo zypper install hapee-2.6r1-lb-update
+```
 
 
 ### Ecryptfs-utils
