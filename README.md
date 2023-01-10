@@ -30,7 +30,7 @@
 - [**Lynis**](https://github.com/KooshaYeganeh/OpenSuse4Developers#lynis)  
 - [**Fail2Ban**](https://github.com/KooshaYeganeh/OpenSuse4Developers#fail2ban)  
 - [**TcpWrapper**](https://github.com/KooshaYeganeh/OpenSuse4Developers#tcp-wrappers)  
-- [**HAProxy Enterprise**]()  
+- [**HAProxy Enterprise**](https://github.com/KooshaYeganeh/OpenSuse4Developers#haproxy-enterprise)  
 - [**EcryptFs**](https://github.com/KooshaYeganeh/OpenSuse4Developers#ecryptfs-utils)  
 - [**Aide**](https://github.com/KooshaYeganeh/OpenSuse4Developers#aide)  
 - [**TripWire**](https://github.com/KooshaYeganeh/OpenSuse4Developers#tripwire)    
@@ -358,7 +358,7 @@ sudo systemctl restart nginx
 
 
 
-
+[Http Load Balancing with Nginx](https://nginx.org/en/docs/http/load_balancing.html)
 
 
 
