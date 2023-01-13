@@ -22,6 +22,13 @@
 - [**TLP**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-tlp-for-better-power-management)  
 - [**Android Debug Bridge**](https://github.com/KooshaYeganeh/OpenSuse4Developers#android-debug-bridge)
 
+
+- [Network Security]()
+    - [Namp]()
+    - [tcpdump]()
+    - [wireshark]()
+    - [iptraf-ng]()
+
 ### Security
 
 - [**ClamAV**](https://github.com/KooshaYeganeh/OpenSuse4Developers#clamav)  
@@ -440,6 +447,62 @@ sudo zypper refresh
 sudo zypper install android-tools
 ```
 
+
+### Network Security
+
+#### Namp
+
+Nmap is a network scanner created by Gordon Lyon. Nmap is used to discover hosts and services on a computer network by sending packets and analyzing the responses. Nmap provides a number of features for probing computer networks, including host discovery and service and operating system detection
+
+
+```
+sudo zypper -n install nmap
+```
+
+
+#### Tcpdump
+
+Wireshark is a free and open-source packet analyzer. It is used for network troubleshooting, analysis, software and communications protocol development, and education. Originally named Ethereal, the project was renamed Wireshark in May 2006 due to trademark issues
+
+
+```
+sudo zypper -n install tcpdump
+```
+
+
+### Wireshark
+
+Wireshark is a free and open-source packet analyzer. It is used for network troubleshooting, analysis, software and communications protocol development, and education. Originally named Ethereal, the project was renamed Wireshark in May 2006 due to trademark issues
+
+
+```
+sudo zypper -n install wireshark
+```
+
+
+### iptraf-ng
+
+
+
+![iptraf-ng](https://www.tecmint.com/wp-content/uploads/2013/02/Linux-IP-Traffic-Monitor.png)
+
+IPTraf-ng is a console-based Linux network statistics monitoring program that shows information about IP traffic, which includes information such as:
+
+> 1 Current TCP connections
+> 2 UDP, ICMP, OSPF, and other types of IP packets
+> 3 Packet and byte counts on TCP connections
+> 4 IP, TCP, UDP, ICMP, non-IP, and other packet and byte counts
+> 5 TCP/UDP counts by ports
+> 6 Packet counts by packet sizes
+> 7 Packet and byte counts by IP address
+> 8 Interface activity
+> 9 Flag statuses on TCP packets
+> 10 LAN station statistics
+
+
+```
+sudo zypper -n install iptraf-ng
+```
 
 
 
@@ -1418,6 +1481,18 @@ add This Lines to */etc/fstab*
 koosha@opensuse:/home/koosha/Pictures /home/koosha/mnt sshfs
 ```
 
+### Namp
+
+```
+sudo zypper -n install nmap
+```
+
+
+### Tcpdump
+
+```
+sudo zypper -n install tcpdump
+```
 
 
 
