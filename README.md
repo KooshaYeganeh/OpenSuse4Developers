@@ -9,11 +9,11 @@
 
 ### Desktop 
 
+- [**Git**](https://github.com/KooshaYeganeh/OpenSuse4Developers#git)  
 - [**oh-my-zsh**](https://github.com/KooshaYeganeh/OpenSuse4Developers#zsh-and-oh-my-zsh)  
 - [**vscode**](https://github.com/KooshaYeganeh/OpenSuse4Developers#vscode)  
 - [**Docker**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-docker)  
 - [**Vim**](https://github.com/KooshaYeganeh/OpenSuse4Developers#vim-and-vundle)  
-- [**Git**](https://github.com/KooshaYeganeh/OpenSuse4Developers#git)  
 - [**MariaDB**](https://github.com/KooshaYeganeh/OpenSuse4Developers#mariadb)  
 - [**Nginx**](https://github.com/KooshaYeganeh/OpenSuse4Developers#nginx)  
     - [Reverse Proxy with Nginx](https://github.com/KooshaYeganeh/OpenSuse4Developers#reverse-proxy-with-nginx)  
@@ -49,6 +49,23 @@
 - [**Change Default MariaDB Port**](https://github.com/KooshaYeganeh/OpenSuse4Developers#change-mariadb-default-port)  
 - [**Munin**](https://github.com/KooshaYeganeh/OpenSuse4Developers#minun)
 
+## Git
+
+![Git](https://1000logos.net/wp-content/uploads/2020/08/Git-Logo-500x313.png)
+
+```
+sudo zypper -n install git
+```
+
+> Note : When you want to install git on opensuse, the opensuse package Manager also installs the graphical user interface for git. If you are not interested in the graphical interface , you can install git amd then remove git-gui:
+
+```
+sudo zypper remove git-gui
+```
+
+
+
+
 ## Zsh and oh-my-zsh 
 
 
@@ -67,6 +84,10 @@ sudo vi ~/.bashrc
 ```
 
 add **exec zsh** to end of Line and write and quit.
+
+
+```
+echo "exec zsh >> ~/.bashrc"
 
 My .bashrc File:
 
@@ -165,7 +186,10 @@ sudo zypper -n install vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
+
 ```
+
+echo '''
     set nocompatible              " required
     filetype off                  " required
 
@@ -215,7 +239,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     syntax on
 
 
-    colorscheme atom-dark
+    colorscheme desert
 
     set number
     set showmatch
@@ -225,25 +249,13 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     set visualbell
     set noerrorbells
 
-
+''' >> ~/.vimrc
 
 
 ```
 
 
-
-## Git
-
-![Git](https://1000logos.net/wp-content/uploads/2020/08/Git-Logo-500x313.png)
-
-```
-sudo zypper -n install git
-```
-
-> Note : When you want to install git on opensuse, the opensuse package Manager also installs the graphical user interface for git. If you are not interested in the graphical interface , you can install git with the following command:
-```
-sudo zypper -n install git-core
-```
+and then go to start vim and type PluginInstall to Install All Extensions on Vim.
 
 
 
