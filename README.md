@@ -16,6 +16,8 @@
     - [**Multi Media codec**](https://github.com/KooshaYeganeh/OpenSuse4Developers#multimedia-codec)  
     - [**TLP**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-tlp-for-better-power-management)  
 
+---------------------------------------------------------------------------------------------------------------------------
+
 - [Editors](https://github.com/KooshaYeganeh/OpenSuse4Developers#editors)
     - [**vscode**](https://github.com/KooshaYeganeh/OpenSuse4Developers#vscode)  
     - [**Vim**](https://github.com/KooshaYeganeh/OpenSuse4Developers#vim-and-vundle)
@@ -27,6 +29,8 @@
         - [Reverse Proxy with Nginx](https://github.com/KooshaYeganeh/OpenSuse4Developers#reverse-proxy-with-nginx)  
     - [**Apache**](https://github.com/KooshaYeganeh/OpenSuse4Developers#apache)  
 
+---------------------------------------------------------------------------------------------------------------------------
+
 - [**Network Tools**](https://github.com/KooshaYeganeh/OpenSuse4Developers#network-tools)
     - [Namp](https://github.com/KooshaYeganeh/OpenSuse4Developers#namp)
     - [tcpdump](https://github.com/KooshaYeganeh/OpenSuse4Developers#tcpdump)
@@ -34,10 +38,13 @@
     - [iptraf-ng](https://github.com/KooshaYeganeh/OpenSuse4Developers#iptraf-ng)
 
 
+---------------------------------------------------------------------------------------------------------------------------
+
 - [Other Tools](https://github.com/KooshaYeganeh/OpenSuse4Developers#oher-tools)
     - [**Docker**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-docker)  
     - [**Android Debug Bridge**](https://github.com/KooshaYeganeh/OpenSuse4Developers#android-debug-bridge)
 
+---------------------------------------------------------------------------------------------------------------------------
 ### Security
 
 - [**ClamAV**](https://github.com/KooshaYeganeh/OpenSuse4Developers#clamav)  
