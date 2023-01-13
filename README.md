@@ -9,19 +9,27 @@
 
 ### Desktop 
 
-- [**Git**](https://github.com/KooshaYeganeh/OpenSuse4Developers#git)  
-- [**oh-my-zsh**](https://github.com/KooshaYeganeh/OpenSuse4Developers#zsh-and-oh-my-zsh)  
-- [**vscode**](https://github.com/KooshaYeganeh/OpenSuse4Developers#vscode)  
-- [**Docker**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-docker)  
-- [**Vim**](https://github.com/KooshaYeganeh/OpenSuse4Developers#vim-and-vundle)  
-- [**MariaDB**](https://github.com/KooshaYeganeh/OpenSuse4Developers#mariadb)  
-- [**Nginx**](https://github.com/KooshaYeganeh/OpenSuse4Developers#nginx)  
-    - [Reverse Proxy with Nginx](https://github.com/KooshaYeganeh/OpenSuse4Developers#reverse-proxy-with-nginx)  
-- [**Apache**](https://github.com/KooshaYeganeh/OpenSuse4Developers#apache)  
-- [**Multi Media codec**](https://github.com/KooshaYeganeh/OpenSuse4Developers#multimedia-codec)  
-- [**TLP**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-tlp-for-better-power-management)  
-- [**Android Debug Bridge**](https://github.com/KooshaYeganeh/OpenSuse4Developers#android-debug-bridge)
 
+- [Basic Tools]()
+    - [**Git**](https://github.com/KooshaYeganeh/OpenSuse4Developers#git)  
+    - [**oh-my-zsh**](https://github.com/KooshaYeganeh/OpenSuse4Developers#zsh-and-oh-my-zsh)  
+    - [**Multi Media codec**](https://github.com/KooshaYeganeh/OpenSuse4Developers#multimedia-codec)  
+    - [**TLP**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-tlp-for-better-power-management)  
+
+- [Editors]()
+    - [**vscode**](https://github.com/KooshaYeganeh/OpenSuse4Developers#vscode)  
+    - [**Vim**](https://github.com/KooshaYeganeh/OpenSuse4Developers#vim-and-vundle)
+- [Database]()
+    - [**MariaDB**](https://github.com/KooshaYeganeh/OpenSuse4Developers#mariadb)  
+    - [**SQLite3**]()
+- [WebServer]()
+    - [**Nginx**](https://github.com/KooshaYeganeh/OpenSuse4Developers#nginx)  
+        - [Reverse Proxy with Nginx](https://github.com/KooshaYeganeh/OpenSuse4Developers#reverse-proxy-with-nginx)  
+    - [**Apache**](https://github.com/KooshaYeganeh/OpenSuse4Developers#apache)  
+
+- [Other Tools]()
+    - [**Docker**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-docker)  
+    - [**Android Debug Bridge**](https://github.com/KooshaYeganeh/OpenSuse4Developers#android-debug-bridge)
 
 - [**Network Security**](https://github.com/KooshaYeganeh/OpenSuse4Developers#network-security)
     - [Namp](https://github.com/KooshaYeganeh/OpenSuse4Developers#namp)
@@ -48,6 +56,11 @@
 - [**MySQL Tuner**](https://github.com/KooshaYeganeh/OpenSuse4Developers#mysql-tuner)  
 - [**Change Default MariaDB Port**](https://github.com/KooshaYeganeh/OpenSuse4Developers#change-mariadb-default-port)  
 - [**Munin**](https://github.com/KooshaYeganeh/OpenSuse4Developers#minun)
+
+
+
+## Basic Tools
+
 
 ## Git
 
@@ -88,6 +101,7 @@ add **exec zsh** to end of Line and write and quit.
 
 ```
 echo "exec zsh >> ~/.bashrc"
+```
 
 My .bashrc File:
 
@@ -123,6 +137,56 @@ test -s ~/.alias && . ~/.alias || true
 
 exec zsh
 ```
+
+
+## Multimedia Codec
+
+*After installing OpenSuse, we often see an error (h256 codec) that does not allow us to play videos.
+To solve this problem, we can either install VLC or follow the steps below:*
+
+```
+sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/' packman
+```
+
+```
+sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/' packman
+```
+
+```
+sudo zypper refresh
+```
+
+```
+sudo zypper dist-upgrade --from packman --allow-vendor-change
+```
+
+## Install TLP for Better Power Management
+
+```
+sudo zypper -n install tlp tlp-rdw
+```
+
+```
+sudo systemctl enable tlp
+```
+
+## configure /tmp
+
+*In OpenSuse, the contents of the /tmp directory are not deleted by default every boot,
+if you want this directory to be deleted, we create a tmp.conf file in the /etc/tmpfiles.d path.*
+
+```
+vi /etc/tmpfiles.d/tmp.conf
+```
+
+*add this Line*
+```
+D /tmp 1777 root root -
+```
+or
+
+*Or in GUI you can chnage setting from the path system_setttng -> privacy -> purge Trash and Temporary Files -> purge After*
+
 
 
 ## VsCode
@@ -299,6 +363,15 @@ user=mysql user
 password=mysql password
 ```
 
+
+## SQlite
+
+```
+sudo zypper -n install sqlite3
+```
+
+
+
 ## Nginx
 
 ![Ngninx](https://logos-download.com/wp-content/uploads/2016/09/Nginx_logo.png)
@@ -391,54 +464,6 @@ sudo systemctl restart nginx
 sudo zypper -n install apache2
 ```
 
-
-## Multimedia Codec
-
-*After installing OpenSuse, we often see an error (h256 codec) that does not allow us to play videos.
-To solve this problem, we can either install VLC or follow the steps below:*
-
-```
-sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/' packman
-```
-
-```
-sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/' packman
-```
-
-```
-sudo zypper refresh
-```
-
-```
-sudo zypper dist-upgrade --from packman --allow-vendor-change
-```
-
-## Install TLP for Better Power Management
-
-```
-sudo zypper -n install tlp tlp-rdw
-```
-
-```
-sudo systemctl enable tlp
-```
-
-## configure /tmp
-
-*In OpenSuse, the contents of the /tmp directory are not deleted by default every boot,
-if you want this directory to be deleted, we create a tmp.conf file in the /etc/tmpfiles.d path.*
-
-```
-vi /etc/tmpfiles.d/tmp.conf
-```
-
-*add this Line*
-```
-D /tmp 1777 root root -
-```
-or
-
-*Or in GUI you can chnage setting from the path system_setttng -> privacy -> purge Trash and Temporary Files -> purge After*
 
 
 ## Android Debug Bridge
