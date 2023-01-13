@@ -10,32 +10,33 @@
 ### Desktop 
 
 
-- [Basic Tools]()
+- [Basic Tools](https://github.com/KooshaYeganeh/OpenSuse4Developers#basic-tools)
     - [**Git**](https://github.com/KooshaYeganeh/OpenSuse4Developers#git)  
     - [**oh-my-zsh**](https://github.com/KooshaYeganeh/OpenSuse4Developers#zsh-and-oh-my-zsh)  
     - [**Multi Media codec**](https://github.com/KooshaYeganeh/OpenSuse4Developers#multimedia-codec)  
     - [**TLP**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-tlp-for-better-power-management)  
 
-- [Editors]()
+- [Editors](https://github.com/KooshaYeganeh/OpenSuse4Developers#editors)
     - [**vscode**](https://github.com/KooshaYeganeh/OpenSuse4Developers#vscode)  
     - [**Vim**](https://github.com/KooshaYeganeh/OpenSuse4Developers#vim-and-vundle)
-- [Database]()
+- [Database](https://github.com/KooshaYeganeh/OpenSuse4Developers#databases)
     - [**MariaDB**](https://github.com/KooshaYeganeh/OpenSuse4Developers#mariadb)  
-    - [**SQLite3**]()
-- [WebServer]()
+    - [**SQLite3**](https://github.com/KooshaYeganeh/OpenSuse4Developers#sqlite)
+- [WebServer](https://github.com/KooshaYeganeh/OpenSuse4Developers#webservers)
     - [**Nginx**](https://github.com/KooshaYeganeh/OpenSuse4Developers#nginx)  
         - [Reverse Proxy with Nginx](https://github.com/KooshaYeganeh/OpenSuse4Developers#reverse-proxy-with-nginx)  
     - [**Apache**](https://github.com/KooshaYeganeh/OpenSuse4Developers#apache)  
 
-- [Other Tools]()
-    - [**Docker**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-docker)  
-    - [**Android Debug Bridge**](https://github.com/KooshaYeganeh/OpenSuse4Developers#android-debug-bridge)
-
-- [**Network Security**](https://github.com/KooshaYeganeh/OpenSuse4Developers#network-security)
+- [**Network Tools**](https://github.com/KooshaYeganeh/OpenSuse4Developers#network-tools)
     - [Namp](https://github.com/KooshaYeganeh/OpenSuse4Developers#namp)
     - [tcpdump](https://github.com/KooshaYeganeh/OpenSuse4Developers#tcpdump)
     - [wireshark](https://github.com/KooshaYeganeh/OpenSuse4Developers#wireshark)
     - [iptraf-ng](https://github.com/KooshaYeganeh/OpenSuse4Developers#iptraf-ng)
+
+
+- [Other Tools](https://github.com/KooshaYeganeh/OpenSuse4Developers#oher-tools)
+    - [**Docker**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-docker)  
+    - [**Android Debug Bridge**](https://github.com/KooshaYeganeh/OpenSuse4Developers#android-debug-bridge)
 
 ### Security
 
@@ -458,7 +459,7 @@ sudo zypper -n install apache2
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
-### Network Security
+### Network Tools
 
 #### Namp
 
