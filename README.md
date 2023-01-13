@@ -187,7 +187,10 @@ or
 
 *Or in GUI you can chnage setting from the path system_setttng -> privacy -> purge Trash and Temporary Files -> purge After*
 
+--------------------------------------------------------------------------------------------------------------------------------
 
+
+## Editors
 
 ## VsCode
 
@@ -217,24 +220,6 @@ sudo zypper refresh
 ```
 sudo zypper -n install code
 ```
-
-
-
-
-## Install Docker
-
-![Docker](https://logos-world.net/wp-content/uploads/2021/02/Docker-Symbol.png)
-
-```
-sudo zypper -n install docker
-```
-```
-sudo systemctl start docker
-```
-```
-sudo systemctl enable docker
-```
-
 
 ## Vim and Vundle
 
@@ -323,6 +308,10 @@ and then go to start vim and type PluginInstall to Install All Extensions on Vim
 
 
 
+---------------------------------------------------------------------------------------------------------------------------------
+
+## Databases
+
 ## MariaDB
 
 ![mariadb](https://whatthelogo.com/storage/logos/mariadb-273522.webp)
@@ -366,15 +355,18 @@ password=mysql password
 
 ## SQlite
 
+SQLite is a database engine written in the C programming language and maintained by Hwaci. It is not a standalone app; rather, it is a library that software developers embed in their apps. As such, it belongs to the family of embedded databases
+
 ```
 sudo zypper -n install sqlite3
 ```
+--------------------------------------------------------------------------------------------------------------------------------
 
-
+## WebServers
 
 ## Nginx
 
-![Ngninx](https://logos-download.com/wp-content/uploads/2016/09/Nginx_logo.png)
+![Nginx](https://logos-download.com/wp-content/uploads/2016/09/Nginx_logo.png)
 
 
 
@@ -464,28 +456,7 @@ sudo systemctl restart nginx
 sudo zypper -n install apache2
 ```
 
-
-
-## Android Debug Bridge
-
-![ADB](https://www.freepnglogos.com/uploads/android-logo-png/android-logo-0.png)
-
-
-If you want to use ADB and Fastboot, sideload an APK or Zip, flash a custom recovery or the stock factory images, access and control your Android device using a computer, you’ll need to enable Developer Options and turn on USB Debugging. Without having them enabled, Android devices just can’t communicate with the computer. Here’s how to enable Developer Options on Android devices from different manufacturers.
-
-
-**OpenSuse Leap 15.3**
-
-```
-sudo zypper addrepo https://download.opensuse.org/repositories/hardware/openSUSE_Leap_15.3/hardware.repo
-```
-```
-sudo zypper refresh
-```
-```
-sudo zypper install android-tools
-```
-
+---------------------------------------------------------------------------------------------------------------------------------
 
 ### Network Security
 
@@ -542,6 +513,46 @@ IPTraf-ng is a console-based Linux network statistics monitoring program that sh
 ```
 sudo zypper -n install iptraf-ng
 ```
+--------------------------------------------------------------------------------------------------------------------------------
+
+## Oher Tools
+
+## Install Docker
+
+![Docker](https://logos-world.net/wp-content/uploads/2021/02/Docker-Symbol.png)
+
+```
+sudo zypper -n install docker
+```
+```
+sudo systemctl start docker
+```
+```
+sudo systemctl enable docker
+```
+
+
+
+## Android Debug Bridge
+
+![ADB](https://www.freepnglogos.com/uploads/android-logo-png/android-logo-0.png)
+
+
+If you want to use ADB and Fastboot, sideload an APK or Zip, flash a custom recovery or the stock factory images, access and control your Android device using a computer, you’ll need to enable Developer Options and turn on USB Debugging. Without having them enabled, Android devices just can’t communicate with the computer. Here’s how to enable Developer Options on Android devices from different manufacturers.
+
+
+**OpenSuse Leap 15.3**
+
+```
+sudo zypper addrepo https://download.opensuse.org/repositories/hardware/openSUSE_Leap_15.3/hardware.repo
+```
+```
+sudo zypper refresh
+```
+```
+sudo zypper install android-tools
+```
+
 
 
 
