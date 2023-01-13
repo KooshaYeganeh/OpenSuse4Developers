@@ -23,7 +23,7 @@
 - [**Android Debug Bridge**](https://github.com/KooshaYeganeh/OpenSuse4Developers#android-debug-bridge)
 
 
-- [Network Security](https://github.com/KooshaYeganeh/OpenSuse4Developers#network-security)
+- [**Network Security**](https://github.com/KooshaYeganeh/OpenSuse4Developers#network-security)
     - [Namp](https://github.com/KooshaYeganeh/OpenSuse4Developers#namp)
     - [tcpdump](https://github.com/KooshaYeganeh/OpenSuse4Developers#tcpdump)
     - [wireshark](https://github.com/KooshaYeganeh/OpenSuse4Developers#wireshark)
@@ -42,8 +42,8 @@
 - [**Aide**](https://github.com/KooshaYeganeh/OpenSuse4Developers#aide)  
 - [**TripWire**](https://github.com/KooshaYeganeh/OpenSuse4Developers#tripwire)    
 - [**psad**](https://github.com/KooshaYeganeh/OpenSuse4Developers#psad)    
-- [**nmap**]()    
-- [**Tcpdump**]()    
+- [**nmap**](https://github.com/KooshaYeganeh/OpenSuse4Developers#namp-1)    
+- [**Tcpdump**](https://github.com/KooshaYeganeh/OpenSuse4Developers#tcpdump-1)    
 - [**sshfs**](https://github.com/KooshaYeganeh/OpenSuse4Developers#sshfs)  
 - [**MySQL Tuner**](https://github.com/KooshaYeganeh/OpenSuse4Developers#mysql-tuner)  
 - [**Change Default MariaDB Port**](https://github.com/KooshaYeganeh/OpenSuse4Developers#change-mariadb-default-port)  
