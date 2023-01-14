@@ -10,7 +10,7 @@
 ### Desktop 
 
 
-- [Basic Tools](https://github.com/KooshaYeganeh/OpenSuse4Developers#basic-tools)
+- [**Basic Tools**](https://github.com/KooshaYeganeh/OpenSuse4Developers#basic-tools)
     - [**Git**](https://github.com/KooshaYeganeh/OpenSuse4Developers#git)  
     - [**oh-my-zsh**](https://github.com/KooshaYeganeh/OpenSuse4Developers#zsh-and-oh-my-zsh)  
     - [**Multi Media codec**](https://github.com/KooshaYeganeh/OpenSuse4Developers#multimedia-codec)  
@@ -18,13 +18,13 @@
 
 ---------------------------------------------------------------------------------------------------------------------------
 
-- [Editors](https://github.com/KooshaYeganeh/OpenSuse4Developers#editors)
+- [**Editors**](https://github.com/KooshaYeganeh/OpenSuse4Developers#editors)
     - [**vscode**](https://github.com/KooshaYeganeh/OpenSuse4Developers#vscode)  
     - [**Vim**](https://github.com/KooshaYeganeh/OpenSuse4Developers#vim-and-vundle)
-- [Database](https://github.com/KooshaYeganeh/OpenSuse4Developers#databases)
+- [**Database**](https://github.com/KooshaYeganeh/OpenSuse4Developers#databases)
     - [**MariaDB**](https://github.com/KooshaYeganeh/OpenSuse4Developers#mariadb)  
     - [**SQLite3**](https://github.com/KooshaYeganeh/OpenSuse4Developers#sqlite)
-- [WebServer](https://github.com/KooshaYeganeh/OpenSuse4Developers#webservers)
+- [**WebServer**](https://github.com/KooshaYeganeh/OpenSuse4Developers#webservers)
     - [**Nginx**](https://github.com/KooshaYeganeh/OpenSuse4Developers#nginx)  
         - [Reverse Proxy with Nginx](https://github.com/KooshaYeganeh/OpenSuse4Developers#reverse-proxy-with-nginx)  
     - [**Apache**](https://github.com/KooshaYeganeh/OpenSuse4Developers#apache)  
@@ -53,13 +53,15 @@
 - [**Lynis**](https://github.com/KooshaYeganeh/OpenSuse4Developers#lynis)  
 - [**Fail2Ban**](https://github.com/KooshaYeganeh/OpenSuse4Developers#fail2ban)  
 - [**TcpWrapper**](https://github.com/KooshaYeganeh/OpenSuse4Developers#tcp-wrappers)  
-- [**HAProxy Enterprise**](https://github.com/KooshaYeganeh/OpenSuse4Developers#haproxy-enterprise)  
 - [**EcryptFs**](https://github.com/KooshaYeganeh/OpenSuse4Developers#ecryptfs-utils)  
 - [**Aide**](https://github.com/KooshaYeganeh/OpenSuse4Developers#aide)  
 - [**TripWire**](https://github.com/KooshaYeganeh/OpenSuse4Developers#tripwire)    
 - [**psad**](https://github.com/KooshaYeganeh/OpenSuse4Developers#psad)    
 - [**nmap**](https://github.com/KooshaYeganeh/OpenSuse4Developers#namp-1)    
 - [**Tcpdump**](https://github.com/KooshaYeganeh/OpenSuse4Developers#tcpdump-1)    
+- [**Nginx Modsecurity**]()
+- [**Modsecurity**]()
+- [**HAproxy**]()
 - [**sshfs**](https://github.com/KooshaYeganeh/OpenSuse4Developers#sshfs)  
 - [**MySQL Tuner**](https://github.com/KooshaYeganeh/OpenSuse4Developers#mysql-tuner)  
 - [**Change Default MariaDB Port**](https://github.com/KooshaYeganeh/OpenSuse4Developers#change-mariadb-default-port)  
@@ -1497,23 +1499,6 @@ vsftpd : 10.0.1.
 ```
 
 
-### HAProxy Enterprise
-
-The HAProxy Enterprise software load balancer spreads traffic across a pool of healthy servers, allowing you to scale out your capacity for handling concurrent requests. You can then easily answer the demand, while also improving performance and availability.
-
-![Haproxy Enterprise Load Balancing](https://cdn.haproxy.com/documentation/hapee/latest/assets/with-a-loadbalancer-d62b460dfabe2f4cffbb814c3411911adc891979e9ee6e05705d6531263428ff.png)
-
-1- First Go to This Link and Get Trial:
-
-[trial](https://www.haproxy.com/downloads/hapee-trial/)
-
-2- To install HAProxy Enterprise, run the following command, replacing <HAProxy Enterprise Key> with the key you were given when you [registered](https://www.haproxy.com/downloads/hapee-trial/).
-
-```
-wget https://www.haproxy.com/static/install_haproxy_enterprise.sh &&
-   sudo bash ./install_haproxy_enterprise.sh 2.6r1 <HAProxy Enterprise key>
-```
-
 3- Enable and Start
 
 ```
@@ -1918,7 +1903,11 @@ sudo zypper -n install modsecurity
 ```
 
 
-### LoadBalancer
+### HAProxy (LoadBalancer)
+
+
+![Haproxy Enterprise Load Balancing](https://cdn.haproxy.com/documentation/hapee/latest/assets/with-a-loadbalancer-d62b460dfabe2f4cffbb814c3411911adc891979e9ee6e05705d6531263428ff.png)
+
 
 > HAProxy, which stands for High Availability Proxy, is a popular open source software TCP/HTTP Load Balancer and proxying solution which can be run on Linux, macOS, and FreeBSD.
 
