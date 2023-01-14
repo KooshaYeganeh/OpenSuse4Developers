@@ -57,11 +57,11 @@
 - [**Aide**](https://github.com/KooshaYeganeh/OpenSuse4Developers#aide)  
 - [**TripWire**](https://github.com/KooshaYeganeh/OpenSuse4Developers#tripwire)    
 - [**psad**](https://github.com/KooshaYeganeh/OpenSuse4Developers#psad)    
-- [**nmap**](https://github.com/KooshaYeganeh/OpenSuse4Developers#namp-1)    
+- [**nmap**](https://github.com/KooshaYeganeh/OpenSuse4Developers#nmap)    
 - [**Tcpdump**](https://github.com/KooshaYeganeh/OpenSuse4Developers#tcpdump-1)    
-- [**Nginx Modsecurity**]()
-- [**Modsecurity**]()
-- [**HAproxy**]()
+- [**Nginx Modsecurity**](https://github.com/KooshaYeganeh/OpenSuse4Developers#nginx-modsecirity)
+- [**Modsecurity**](https://github.com/KooshaYeganeh/OpenSuse4Developers#modsecurity)
+- [**HAproxy**](https://github.com/KooshaYeganeh/OpenSuse4Developers#haproxy-loadbalancer)
 - [**sshfs**](https://github.com/KooshaYeganeh/OpenSuse4Developers#sshfs)  
 - [**MySQL Tuner**](https://github.com/KooshaYeganeh/OpenSuse4Developers#mysql-tuner)  
 - [**Change Default MariaDB Port**](https://github.com/KooshaYeganeh/OpenSuse4Developers#change-mariadb-default-port)  
@@ -1873,7 +1873,7 @@ Note : To check the status of PSAD, open a Terminal Window and enter :
 psad --Status
 ```
 
-### Namp
+### Nmap
 
 ```
 sudo zypper -n install nmap
