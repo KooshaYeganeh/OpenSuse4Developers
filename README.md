@@ -513,7 +513,6 @@ sudo systemctl restart nginx
 ```
 
 
-
 [Http Load Balancing with Nginx](https://nginx.org/en/docs/http/load_balancing.html)
 
 
@@ -526,11 +525,10 @@ sudo systemctl restart nginx
 sudo zypper -n install apache2
 ```
 
----------------------------------------------------------------------------------------------------------------------------------
 
 ### Network Tools
 
-#### Namp
+#### Nmap
 
 Nmap is a network scanner created by Gordon Lyon. Nmap is used to discover hosts and services on a computer network by sending packets and analyzing the responses. Nmap provides a number of features for probing computer networks, including host discovery and service and operating system detection
 
@@ -1913,6 +1911,21 @@ sudo zypper -n install nginx-module-modsecurity
 ```
 
 
+### Modsecurity
+
+```
+sudo zypper -n install modsecurity
+```
+
+
+### LoadBalancer
+
+> HAProxy, which stands for High Availability Proxy, is a popular open source software TCP/HTTP Load Balancer and proxying solution which can be run on Linux, macOS, and FreeBSD.
+
+
+```
+sudo zypper -n install haproxy
+```
 
 
 
