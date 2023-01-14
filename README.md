@@ -40,9 +40,9 @@
 
 ---------------------------------------------------------------------------------------------------------------------------
 
-- [Other Tools](https://github.com/KooshaYeganeh/OpenSuse4Developers#oher-tools)
-    - [**Docker**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-docker)  
-    - [**Android Debug Bridge**](https://github.com/KooshaYeganeh/OpenSuse4Developers#android-debug-bridge)
+- [**Other Tools**](https://github.com/KooshaYeganeh/OpenSuse4Developers#oher-tools)
+    - [Docker](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-docker)  
+    - [Android Debug Bridge](https://github.com/KooshaYeganeh/OpenSuse4Developers#android-debug-bridge)
 
 ---------------------------------------------------------------------------------------------------------------------------
 ### Security
@@ -108,7 +108,7 @@ add **exec zsh** to end of Line and write and quit.
 
 
 ```
-echo "exec zsh >> ~/.bashrc"
+echo "exec zsh" >> ~/.bashrc
 ```
 
 My .bashrc File:
@@ -368,6 +368,68 @@ SQLite is a database engine written in the C programming language and maintained
 ```
 sudo zypper -n install sqlite3
 ```
+
+
+**Create a a new database**
+
+
+```
+sqlite nedDB.sqlite
+```
+
+
+**Delete a database**
+
+```
+rm file.sqlite
+```
+
+
+**Dump to SQL**
+
+```
+.output filename
+```
+
+```
+.dump
+```
+
+
+**schema**
+
+```
+.schema
+```
+
+**Restore a SQL Dump**
+
+> To restore a backup from a sql dump, use the command:
+
+```
+.read db.sql
+```
+
+**Show tables of a database**
+
+> To list every table of a database, use the command:
+
+```
+.table
+```
+
+
+**Get database information**
+
+```
+.dbinfo
+```
+
+
+
+
+
+
 --------------------------------------------------------------------------------------------------------------------------------
 
 ## WebServers
@@ -478,6 +540,62 @@ sudo zypper -n install nmap
 ```
 
 
+##### Top Commands
+
+**Fast Scan**
+
+```
+nmap -F 192.168.0.1
+```
+
+**Multiple Hosts**
+
+```
+sudo nmap 192.168.1.10/24
+```
+
+**Excluding Hosts from Search**
+
+```
+sudo nmap 192.168.1.0/24 --exclude 192.168.1.62
+```
+
+*exclude from file*
+
+```
+sudo nmap 192.168.1.0/24  --excludefile /file.txt
+```
+
+**Scan to Detect Firewall Settings**
+
+```
+sudo nmap -sA 192.168.0.1
+```
+
+
+**Scan to See Which Servers are Active**
+
+```
+nmap -sP 192.168.1025.0/24
+```
+
+
+**Find Host Interfaces, Routes, and Packets**
+
+```
+nmap --iflist
+```
+
+
+**Create Decoys While Scanning**
+
+> Nmap can also be used to create decoys, which are intended to fool firewalls. While decoys can be used for nefarious purposes, it’s generally used to debug.
+
+
+```
+sudo nmap -D 192.168.0.1,192.168.0.2,...
+```
+
 #### Tcpdump
 
 Wireshark is a free and open-source packet analyzer. It is used for network troubleshooting, analysis, software and communications protocol development, and education. Originally named Ethereal, the project was renamed Wireshark in May 2006 due to trademark issues
@@ -486,6 +604,274 @@ Wireshark is a free and open-source packet analyzer. It is used for network trou
 ```
 sudo zypper -n install tcpdump
 ```
+
+##### Top Commands 
+
+
+**Get us HTTPS traffic :**
+
+> This showed some HTTPS traffic, with a hex display visible on the right portion of the output (alas, it’s encrypted). Just remember—when in doubt, run the command above with the port you’re interested in, and you should be on your way.
+
+```
+tcpdump -nnSX -vv port 443
+```
+
+**Everything on an interface**
+
+```
+tcpdump -i eth0
+```
+
+
+**Find Traffic by IP**
+
+```
+tcpdump host 1.1.1.1
+```
+
+
+**Filtering by Source and/or Destination**
+
+> If you only want to see traffic in one direction or the other, you can use src and dst.
+
+
+```
+tcpdump src 1.1.1.1
+```
+```
+tcpdump dst 1.0.0.1
+```
+
+
+**Finding Packets by Network**
+
+> To find packets going to or from a particular network or subnet, use the net option.
+
+
+```
+tcpdump net 1.2.3.0/24
+```
+
+
+**Get Packet Contents with Hex Output**
+
+> Hex output is useful when you want to see the content of the packets in question, and it’s often best used when you’re isolating a few candidates for closer scrutiny.
+
+
+```
+tcpdump -c 1 -X icmp
+```
+
+
+
+**Show Traffic Related to a Specific Port**
+
+> You can find specific port traffic by using the port option followed by the port number.
+
+```
+tcpdump port 3389
+```
+```
+tcpdump src port 1025
+```
+
+**Show Traffic of One Protocol**
+
+> If you’re looking for one particular kind of traffic, you can use tcp, udp, icmp, and many others as well.
+
+
+``` 
+tcpdump icmp
+```
+
+
+**Show only IP6 Traffic**
+
+> You can also find all IP6 traffic using the protocol option.
+
+```
+tcpdump ip6
+```
+
+
+**Find Traffic Using Port Ranges**
+
+> You can also use a range of ports to find traffic.
+
+```
+tcpdump portrange 21-23
+```
+
+
+**Find Traffic Based on Packet Size**
+
+> If you’re looking for packets of a particular size you can use these options. You can use less, greater, or their associated symbols that you would expect from mathematics.
+
+```
+tcpdump less 32
+```
+```
+tcpdump greater 64
+```
+```
+tcpdump <= 128
+```
+
+**Reading / Writing Captures to a File (pcap)**
+
+
+> It’s often useful to save packet captures into a file for analysis in the future. These files are known as PCAP (PEE-cap) files, and they can be processed by hundreds of different applications, including network analyzers, intrusion detection systems, and of course by tcpdump itself. Here we’re writing to a file called capture_file using the -w switch.
+
+
+```
+tcpdump port 80 -w capture_file
+```
+
+**Read From File**
+
+```
+tcpdump -r capture_file
+```
+
+**Combinations**
+
+1. AND
+    and or &&
+2. OR
+    or or ||
+3. EXCEPT
+    not or !
+
+
+
+**Raw Output View**
+
+> Use this combination to see verbose output, with no resolution of hostnames or port numbers, using absolute sequence numbers, and showing human-readable timestamps.
+
+
+```
+tcpdump -ttnnvvS
+```
+
+**From specific IP and destined for a specific Port**
+
+> Let’s find all traffic from 10.5.2.3 going to any host on port 3389.
+
+
+```
+tcpdump -nnvvS src 10.5.2.3 and dst port 3389
+```
+
+**From One Network to Another**
+
+> Let’s look for all traffic coming from 192.168.x.x and going to the 10.x or 172.16.x.x networks, and we’re showing hex output with no hostname resolution and one level of extra verbosity.
+
+
+```
+tcpdump -nvX src net 192.168.0.0/16 and dst net 10.0.0.0/8 or 172.16.0.0/16
+```
+
+
+
+**Non ICMP Traffic Going to a Specific IP**
+
+> This will show us all traffic going to 192.168.0.2 that is not ICMP.
+
+```
+tcpdump dst 192.168.0.2 and src net and not icmp
+```
+
+**Traffic From a Host That Isn’t on a Specific Port**
+
+> This will show us all traffic from a host that isn’t SSH traffic (assuming default port usage).
+
+```
+tcpdump -vv src mars and not dst port 22
+```
+
+> Keep in mind that when you’re building complex queries you might have to group your options using single quotes. Single quotes are used in order to tell tcpdump to ignore certain special characters—in this case below the “( )” brackets. This same technique can be used to group using other expressions such as host, port, net, etc.
+
+```
+tcpdump 'src 10.0.2.4 and (dst port 3389 or 22)'
+```
+
+
+
+**Isolate TCP Flags**
+
+> You can also use filters to isolate packets with specific TCP flags set.
+
+> Isolate TCP RST flags.
+
+```
+tcpdump 'tcp[13] & 4!=0'
+```
+```
+tcpdump 'tcp[tcpflags] == tcp-rst'
+```
+
+> Isolate TCP SYN flags.
+
+
+```
+tcpdump 'tcp[13] & 2!=0'
+```
+```
+tcpdump 'tcp[tcpflags] == tcp-syn'
+```
+
+
+> Isolate packets that have both the SYN and ACK flags set.
+
+```
+tcpdump 'tcp[13]=18'
+```
+
+
+> Isolate TCP URG flags.
+
+```
+tcpdump 'tcp[13] & 32!=0'
+```
+```
+tcpdump 'tcp[tcpflags] == tcp-urg'
+```
+
+
+**Isolate TCP ACK flags.**
+
+```
+tcpdump 'tcp[13] & 16!=0'
+```
+```
+tcpdump 'tcp[tcpflags] == tcp-ack'
+```
+
+
+**Isolate TCP PSH Flags.**
+
+```
+tcpdump 'tcp[13] & 8!=0'
+```
+```
+tcpdump 'tcp[tcpflags] == tcp-push'
+```
+
+**Isolate TCP FIN Flags.**
+
+```
+tcpdump 'tcp[13] & 1!=0'
+```
+```
+tcpdump 'tcp[tcpflags] == tcp-fin'
+```
+
+**Everyday Recipe Examples**
+
+
+
+
+
 
 
 ### Wireshark
@@ -1518,6 +1904,15 @@ sudo zypper -n install tcpdump
 ```
 
 
+### Nginx Modsecirity
+
+ModSecurity web application firewall
+
+```
+sudo zypper -n install nginx-module-modsecurity
+```
+
+
 
 
 
@@ -1698,4 +2093,4 @@ sudo zypper -n install munin
 [redelijkheid](https://www.redelijkheid.com/blog/2017/1/29/configure-nginx-as-a-secure-reverse-proxy)
 
 [linuxhandbook](https://linuxhandbook.com/nginx-reverse-proxy-docker/)
-
+[phoenixnap](https://phoenixnap.com/kb/nmap-commands)
