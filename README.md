@@ -15,11 +15,11 @@
     - [**oh-my-zsh**](https://github.com/KooshaYeganeh/OpenSuse4Developers#zsh-and-oh-my-zsh)  
     - [**Multi Media codec**](https://github.com/KooshaYeganeh/OpenSuse4Developers#multimedia-codec)  
     - [**TLP**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-tlp-for-better-power-management)  
-    - [**lshw**]()  
-    - [**vpn**]()  
-        - [openconnect]()  
-        - [openvpn]()  
-        - [sstp-client]()  
+    - [**lshw**](https://github.com/KooshaYeganeh/OpenSuse4Developers#lshw)  
+    - [**vpn**](https://github.com/KooshaYeganeh/OpenSuse4Developers#vpn)  
+        - [openconnect](https://github.com/KooshaYeganeh/OpenSuse4Developers#openconnect)  
+        - [openvpn](https://github.com/KooshaYeganeh/OpenSuse4Developers#openvpn)  
+        - [sstp-client](https://github.com/KooshaYeganeh/OpenSuse4Developers#openvpn)  
 
 ---------------------------------------------------------------------------------------------------------------------------
 
@@ -41,6 +41,7 @@
     - [tcpdump](https://github.com/KooshaYeganeh/OpenSuse4Developers#tcpdump)
     - [wireshark](https://github.com/KooshaYeganeh/OpenSuse4Developers#wireshark)
     - [iptraf-ng](https://github.com/KooshaYeganeh/OpenSuse4Developers#iptraf-ng)
+    - [yED Graph Editor]()
 
 
 ---------------------------------------------------------------------------------------------------------------------------
@@ -68,7 +69,7 @@
 - [**Modsecurity**](https://github.com/KooshaYeganeh/OpenSuse4Developers#modsecurity)
 - [**HAproxy**](https://github.com/KooshaYeganeh/OpenSuse4Developers#haproxy-loadbalancer)
 - [**sshfs**](https://github.com/KooshaYeganeh/OpenSuse4Developers#sshfs)  
-- [**USBGuard**]()  
+- [**USBGuard**](https://github.com/KooshaYeganeh/OpenSuse4Developers#usbguard)  
 - [**MySQL Tuner**](https://github.com/KooshaYeganeh/OpenSuse4Developers#mysql-tuner)  
 - [**Change Default MariaDB Port**](https://github.com/KooshaYeganeh/OpenSuse4Developers#change-mariadb-default-port)  
 - [**Munin**](https://github.com/KooshaYeganeh/OpenSuse4Developers#minun)
