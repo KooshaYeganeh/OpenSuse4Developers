@@ -939,16 +939,16 @@ sudo zypper -n install wireshark
 
 IPTraf-ng is a console-based Linux network statistics monitoring program that shows information about IP traffic, which includes information such as:  
 
-> 1 Current TCP connections  
-> 2 UDP, ICMP, OSPF, and other types of IP packets  
-> 3 Packet and byte counts on TCP connections  
-> 4 IP, TCP, UDP, ICMP, non-IP, and other packet and byte counts  
-> 5 TCP/UDP counts by ports  
-> 6 Packet counts by packet sizes  
-> 7 Packet and byte counts by IP address  
-> 8 Interface activity  
-> 9 Flag statuses on TCP packets  
-> 10 LAN station statistics
+> 1- Current TCP connections  
+> 2- UDP, ICMP, OSPF, and other types of IP packets  
+> 3- Packet and byte counts on TCP connections  
+> 4- IP, TCP, UDP, ICMP, non-IP, and other packet and byte counts  
+> 5- TCP/UDP counts by ports  
+> 6- Packet counts by packet sizes  
+> 7- Packet and byte counts by IP address  
+> 8- Interface activity  
+> 9- Flag statuses on TCP packets  
+> 10- LAN station statistics
 
 
 ```
