@@ -16,6 +16,10 @@
     - [**Multi Media codec**](https://github.com/KooshaYeganeh/OpenSuse4Developers#multimedia-codec)  
     - [**TLP**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-tlp-for-better-power-management)  
     - [**lshw**]()  
+    - [**vpn**]()  
+        - [openconnect]()  
+        - [openvpn]()  
+        - [sstp-client]()  
 
 ---------------------------------------------------------------------------------------------------------------------------
 
@@ -74,7 +78,7 @@
 ## Basic Tools
 
 
-## Git
+### Git
 
 ![Git](https://1000logos.net/wp-content/uploads/2020/08/Git-Logo-500x313.png)
 
@@ -91,7 +95,7 @@ sudo zypper remove git-gui
 
 
 
-## Zsh and oh-my-zsh 
+### Zsh and oh-my-zsh 
 
 
 ```
@@ -151,7 +155,7 @@ exec zsh
 ```
 
 
-## Multimedia Codec
+### Multimedia Codec
 
 *After installing OpenSuse, we often see an error (h256 codec) that does not allow us to play videos.
 To solve this problem, we can either install VLC or follow the steps below:*
@@ -172,7 +176,7 @@ sudo zypper refresh
 sudo zypper dist-upgrade --from packman --allow-vendor-change
 ```
 
-## Install TLP for Better Power Management
+### Install TLP for Better Power Management
 
 ```
 sudo zypper -n install tlp tlp-rdw
@@ -182,7 +186,7 @@ sudo zypper -n install tlp tlp-rdw
 sudo systemctl enable tlp
 ```
 
-## configure /tmp
+### configure /tmp
 
 *In OpenSuse, the contents of the /tmp directory are not deleted by default every boot,
 if you want this directory to be deleted, we create a tmp.conf file in the /etc/tmpfiles.d path.*
@@ -199,6 +203,46 @@ or
 
 *Or in GUI you can chnage setting from the path system_setttng -> privacy -> purge Trash and Temporary Files -> purge After*
 
+
+### lshw
+
+Lshw is a nifty small command line utility that generates detailed reports about various hardware components on the system. It does so by reading different files in the /proc directory.
+
+
+```
+sudo zypper -n install lshw
+```
+
+### VPN
+
+#### openconnect
+
+```
+sudo zypper -n install openconnect
+```
+
+#### openvpn
+
+```
+sudo zypper -n install openvpn
+```
+
+
+#### sstp-client
+
+Leap 15.3:
+
+```
+sudo zypper addrepo https://download.opensuse.org/repositories/network/openSUSE_Leap_15.3/network.repo
+```
+
+```
+sudo zypper refresh
+```
+
+```
+sudo zypper install sstp-client
+```
 --------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -947,15 +991,6 @@ sudo zypper refresh
 ```
 ```
 sudo zypper install android-tools
-```
-
-### lshw
-
-Lshw is a nifty small command line utility that generates detailed reports about various hardware components on the system. It does so by reading different files in the /proc directory.
-
-
-```
-sudo zypper -n install lshw
 ```
 
 
