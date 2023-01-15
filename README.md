@@ -24,15 +24,15 @@
 ---------------------------------------------------------------------------------------------------------------------------
 
 - [**Editors**](https://github.com/KooshaYeganeh/OpenSuse4Developers#editors)
-    - [**vscode**](https://github.com/KooshaYeganeh/OpenSuse4Developers#vscode)  
-    - [**Vim**](https://github.com/KooshaYeganeh/OpenSuse4Developers#vim-and-vundle)
+    - [vscode](https://github.com/KooshaYeganeh/OpenSuse4Developers#vscode)  
+    - [Vim](https://github.com/KooshaYeganeh/OpenSuse4Developers#vim-and-vundle)
 - [**Database**](https://github.com/KooshaYeganeh/OpenSuse4Developers#databases)
-    - [**MariaDB**](https://github.com/KooshaYeganeh/OpenSuse4Developers#mariadb)  
-    - [**SQLite3**](https://github.com/KooshaYeganeh/OpenSuse4Developers#sqlite)
+    - [MariaDB](https://github.com/KooshaYeganeh/OpenSuse4Developers#mariadb)  
+    - [SQLite3](https://github.com/KooshaYeganeh/OpenSuse4Developers#sqlite)
 - [**WebServer**](https://github.com/KooshaYeganeh/OpenSuse4Developers#webservers)
-    - [**Nginx**](https://github.com/KooshaYeganeh/OpenSuse4Developers#nginx)  
+    - [Nginx](https://github.com/KooshaYeganeh/OpenSuse4Developers#nginx)  
         - [Reverse Proxy with Nginx](https://github.com/KooshaYeganeh/OpenSuse4Developers#reverse-proxy-with-nginx)  
-    - [**Apache**](https://github.com/KooshaYeganeh/OpenSuse4Developers#apache)  
+    - [Apache](https://github.com/KooshaYeganeh/OpenSuse4Developers#apache)  
 
 ---------------------------------------------------------------------------------------------------------------------------
 
