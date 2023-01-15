@@ -963,8 +963,15 @@ is a free, powerful and cross-platform desktop application used for quickly and 
 ![yED Graph Editor](https://www.tecmint.com/wp-content/uploads/2019/10/yED-Graph-Editor.jpg)
 
 
-[downLoad](https://www.yworks.com/resources/yed/demo/yEd-3.22_with-JRE15_64-bit_setup.sh)
---------------------------------------------------------------------------------------------------------------------------------
+[*downLoad link*](https://www.yworks.com/resources/yed/demo/yEd-3.22_with-JRE15_64-bit_setup.sh)
+
+```
+wget https://www.yworks.com/resources/yed/demo/yEd-3.22_with-JRE15_64-bit_setup.sh
+```
+
+
+
+
 
 ## Oher Tools
 
