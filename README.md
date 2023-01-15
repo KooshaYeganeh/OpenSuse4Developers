@@ -15,6 +15,7 @@
     - [**oh-my-zsh**](https://github.com/KooshaYeganeh/OpenSuse4Developers#zsh-and-oh-my-zsh)  
     - [**Multi Media codec**](https://github.com/KooshaYeganeh/OpenSuse4Developers#multimedia-codec)  
     - [**TLP**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-tlp-for-better-power-management)  
+    - [**lshw**]()  
 
 ---------------------------------------------------------------------------------------------------------------------------
 
@@ -63,6 +64,7 @@
 - [**Modsecurity**](https://github.com/KooshaYeganeh/OpenSuse4Developers#modsecurity)
 - [**HAproxy**](https://github.com/KooshaYeganeh/OpenSuse4Developers#haproxy-loadbalancer)
 - [**sshfs**](https://github.com/KooshaYeganeh/OpenSuse4Developers#sshfs)  
+- [**USBGuard**]()  
 - [**MySQL Tuner**](https://github.com/KooshaYeganeh/OpenSuse4Developers#mysql-tuner)  
 - [**Change Default MariaDB Port**](https://github.com/KooshaYeganeh/OpenSuse4Developers#change-mariadb-default-port)  
 - [**Munin**](https://github.com/KooshaYeganeh/OpenSuse4Developers#minun)
@@ -911,7 +913,7 @@ sudo zypper -n install iptraf-ng
 
 ## Oher Tools
 
-## Install Docker
+### Install Docker
 
 ![Docker](https://logos-world.net/wp-content/uploads/2021/02/Docker-Symbol.png)
 
@@ -927,7 +929,7 @@ sudo systemctl enable docker
 
 
 
-## Android Debug Bridge
+### Android Debug Bridge
 
 ![ADB](https://www.freepnglogos.com/uploads/android-logo-png/android-logo-0.png)
 
@@ -947,7 +949,14 @@ sudo zypper refresh
 sudo zypper install android-tools
 ```
 
+### lshw
 
+Lshw is a nifty small command line utility that generates detailed reports about various hardware components on the system. It does so by reading different files in the /proc directory.
+
+
+```
+sudo zypper -n install lshw
+```
 
 
 ## Security
@@ -1947,6 +1956,45 @@ add This Lines to */etc/fstab*
 koosha@opensuse:/home/koosha/Pictures /home/koosha/mnt sshfs
 ```
 
+
+
+### USBGuard
+
+ The USBGuard software framework provides system protection against intrusive USB devices by implementing basic whitelisting and blacklisting capabilities based on device attributes. To enforce a user-defined policy, USBGuard uses the Linux kernel USB device authorization feature. The USBGuard framework provides the following components:
+
+1- The daemon component with an inter-process communication (IPC) interface for dynamic interaction and policy enforcement.
+2- The command-line interface to interact with a running USBGuard instance.
+3- The rule language for writing USB device authorization policies.
+4- The C++ API for interacting with the daemon component implemented in a shared library. 
+
+
+
+install:
+
+```
+sudo zypper -n install usbguard
+```
+```
+sudo zypper -n install usbguard-tools
+```
+
+manage:
+
+```
+sudo systemctl start usbguard
+```
+
+```
+sudo usbguard list-devices
+```
+
+```
+sudo usbguard allow-device 1 or 2 
+```
+
+```
+sudo usbguard block-device 1 or 2 
+```
 
 
 
