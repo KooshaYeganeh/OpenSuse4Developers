@@ -954,6 +954,16 @@ IPTraf-ng is a console-based Linux network statistics monitoring program that sh
 ```
 sudo zypper -n install iptraf-ng
 ```
+
+### yED Graph Editor
+
+is a free, powerful and cross-platform desktop application used for quickly and effectively creating diagrams. It runs on all major platforms such as Unix/Linux, Windows, and Mac OS X. yEd supports a wide variety of diagram types allowing you to create diagrams manually or import external data for manipulation or analysis.
+
+
+![yED Graph Editor](https://www.tecmint.com/wp-content/uploads/2019/10/yED-Graph-Editor.jpg)
+
+
+[DownLoad Link](https://www.yworks.com/resources/yed/demo/yEd-3.22_with-JRE15_64-bit_setup.sh)
 --------------------------------------------------------------------------------------------------------------------------------
 
 ## Oher Tools
