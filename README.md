@@ -2218,34 +2218,39 @@ sudo zypper install virtualbox
 
 **Before you begin**: [installing Puppet Server](https://puppet.com/docs/puppetserver/5.3/install_from_packages.html).
 
-> 1- Install a release package to enable Puppet Platform repositories.  
+**1 -** Install a release package to enable Puppet Platform repositories.  
 
-> 2- Confirm that you can run Puppet executables.
-    The location for Puppet’s executables is /opt/puppetlabs/bin/, which is not in your PATH environment variable by default.
-    The executable path doesn’t matter for Puppet services — for instance, service puppet start works regardless of the PATH — but if you’re running interactive puppet commands, you must either add their location to your PATH or execute them using their full path.  
-    To quickly add the executable location to your PATH for your current terminal session, use the command export PATH=/opt/puppetlabs/bin:$PATH. You can also add this location wherever you configure your PATH, such as your .profile or .bashrc configuration files.  
-    For more information, see details about file and directory locations.  
-    Install the puppet-agent package on your Puppet agent nodes using the command appropriate to your system:  
-        ```
-        Zypper – sudo zypper install puppet-agent
-        ```
-    (Optional) Configure agent settings.
+**2 -** Confirm that you can run Puppet executables.
 
-    For example, if your master isn’t reachable at the default address, server = puppet, set the server setting to your Puppet master’s hostname with the following command: puppet config set server <MASTER FDQN> --section main.
+The location for Puppet’s executables is */opt/puppetlabs/bin/*, which is not in your PATH environment variable by default.
+The executable path doesn’t matter for Puppet services — for instance, service puppet start works regardless of the PATH — but if you’re running interactive puppet commands, you must either add their location to your PATH or execute them using their full path.  
+To quickly add the executable location to your PATH for your current terminal session, use the command export *PATH=/opt/puppetlabs/bin:$PATH*. You can also add this location wherever you configure your *PATH*, such as your *.profile* or *.bashrc* configuration files.  
+For more information, see details about file and directory locations.  
 
-    For other settings you might want to change, see a list of agent-related settings.
+**3 -** Install the puppet-agent package on your Puppet agent nodes using the command appropriate to your system:  
 
-    Start the puppet service: sudo /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true.
+```
+zypper – sudo zypper install puppet-agent
+```
+    
 
-    (Optional) To see a sample of Puppet agent’s output and verify any changes you may have made to your configuration settings in step 5, manually launch and watch a Puppet run: sudo /opt/puppetlabs/bin/puppet agent --test
+**4 -** (Optional) Configure agent settings.
 
-    Sign certificates on the certificate authority (CA) master.
+For example, if your master isn’t reachable at the default address, server = puppet, set the server setting to your Puppet master’s hostname with the following command: puppet config set server <MASTER FDQN> --section main.
 
-    On the Puppet master:
-        Run sudo /opt/puppetlabs/bin/puppet cert list to see any outstanding requests.
-        Run sudo /opt/puppetlabs/bin/puppet cert sign <NAME> to sign a request.
+For other settings you might want to change, see a list of agent-related settings.
 
-    As each Puppet agent runs for the first time, it submits a certificate signing request (CSR) to the CA Puppet master. You must log into that server to check for and sign certificates. After an agent’s certificate is signed, it regularly fetches and applies configuration catalogs from the Puppet master.
+**5 -** Start the puppet service: sudo /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true.
+
+**6 -** (Optional) To see a sample of Puppet agent’s output and verify any changes you may have made to your configuration settings in step 5, manually launch and watch a Puppet run: sudo /opt/puppetlabs/bin/puppet agent --test
+
+**7 -** Sign certificates on the certificate authority (CA) master.
+
+**On the Puppet master :**
+    Run sudo /opt/puppetlabs/bin/puppet cert list to see any outstanding requests.
+    Run sudo /opt/puppetlabs/bin/puppet cert sign <NAME> to sign a request.
+
+As each Puppet agent runs for the first time, it submits a certificate signing request (CSR) to the CA Puppet master. You must log into that server to check for and sign certificates. After an agent’s certificate is signed, it regularly fetches and applies configuration catalogs from the Puppet master.
 
 
 
@@ -2267,3 +2272,4 @@ sudo zypper install virtualbox
 
 [linuxhandbook](https://linuxhandbook.com/nginx-reverse-proxy-docker/)
 [phoenixnap](https://phoenixnap.com/kb/nmap-commands)
+[puppet](https://www.puppet.com/docs/puppet/5.5/install_linux.html)
