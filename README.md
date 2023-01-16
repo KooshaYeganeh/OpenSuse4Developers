@@ -2073,7 +2073,7 @@ For More Information : [USBGuard Informations](https://access.redhat.com/documen
 > If you have a MariaDB database on your server, I suggest you use this script to diagnose configuration problems and increase stability.
 
 
-MainLink : https://github.com/major/MySQLTuner-perl
+MainLink : https://github.com/major/MySQLTuner-perl  
 Download Link : https://github.com/major/MySQLTuner-perl/archive/refs/heads/master.zip
 
 
