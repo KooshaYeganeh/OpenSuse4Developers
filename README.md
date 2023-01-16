@@ -76,7 +76,16 @@
 - [**Munin**](https://github.com/KooshaYeganeh/OpenSuse4Developers#minun)
 
 
+----------------------------------------------------------------------------------------------------------------------------
 
+- [**Task automation and configuration management tools in Linux**](https://github.com/KooshaYeganeh/OpenSuse4Developers#task-automation-and-configuration-management-tools-in-linux)
+
+    - [Ansible](https://github.com/KooshaYeganeh/OpenSuse4Developers#ansible)
+    - [Vagrant](https://github.com/KooshaYeganeh/OpenSuse4Developers#vagrant)
+    - [Puppet](Task automation and configuration management tools in Linux)
+    
+
+----------------------------------------------------------------------------------------------------------------------------
 ## Basic Tools
 
 
@@ -2230,7 +2239,7 @@ For more information, see details about file and directory locations.
 **3 -** Install the puppet-agent package on your Puppet agent nodes using the command appropriate to your system:  
 
 ```
-zypper – sudo zypper install puppet-agent
+sudo zypper install puppet-agent
 ```
     
 
