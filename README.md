@@ -50,6 +50,7 @@
 - [**Other Tools**](https://github.com/KooshaYeganeh/OpenSuse4Developers#oher-tools)
     - [Docker](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-docker)  
     - [Android Debug Bridge](https://github.com/KooshaYeganeh/OpenSuse4Developers#android-debug-bridge)
+    - [Arduino]()
 
 ---------------------------------------------------------------------------------------------------------------------------
 ### Security
@@ -1028,6 +1029,29 @@ sudo zypper refresh
 sudo zypper install android-tools
 ```
 
+### Arduino
+
+```
+zypper --gpg-auto-import-keys ar -f http://download.opensuse.org/repositories/CrossToolchain:/avr/openSUSE_Leap_15.3 'CrossToolchain:avr'
+```
+```
+zypper ref
+```
+```
+zypper in arduino
+```
+
+```
+usermod -a -G dialout,lock,uucp YOURUSERNAME
+```
+
+### picocom
+
+picocom is a minimal dumb-terminal emulation program.
+
+```
+sudo zypper -n install picocom
+```
 
 ## Security
 
