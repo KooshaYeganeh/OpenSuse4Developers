@@ -14,7 +14,7 @@
     - [**gcc**]()  
     - [**Git**](https://github.com/KooshaYeganeh/OpenSuse4Developers#git)  
     - [**oh-my-zsh**](https://github.com/KooshaYeganeh/OpenSuse4Developers#zsh-and-oh-my-zsh)  
-    - [**add Packman Repository**]()  
+    - [**add Packman Repository**](https://github.com/KooshaYeganeh/OpenSuse4Developers#enable-packman-repository)  
     - [**Multi Media codec**](https://github.com/KooshaYeganeh/OpenSuse4Developers#multimedia-codec)  
     - [**TLP**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-tlp-for-better-power-management)  
     - [**lshw**](https://github.com/KooshaYeganeh/OpenSuse4Developers#lshw)  
