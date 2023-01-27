@@ -2303,6 +2303,37 @@ As each Puppet agent runs for the first time, it submits a certificate signing r
 
 
 
+## Optimization
+
+**tuned**
+
+The tuned daemon can be used to apply system tuning adjustments either dynamically, or statically. There are pre-defined tuning profiles that reflect particular workload requirements. 
+
+```
+sudo zypper -n install tuned tuned-utils tuned-utils-systemtap
+```
+
+```
+sudo systemctl start tuned
+```
+
+```
+sudo tuned-adm active
+```
+
+
+```
+sudo tuned-adm profile desktop
+```
+or
+```
+sudo tuned-adm profile balanced
+```
+
+for more Info to Optimize Opensuse Read Document Below:
+
+[System Analysis and Tuning Guide](https://doc.opensuse.org/documentation/leap/tuning/single-html/book-tuning/)
+
 ## Sources
 
 [Tecmint](https://www.tecmint.com/check-integrity-of-file-and-directory-using-aide-in-linux/)
@@ -2322,3 +2353,5 @@ As each Puppet agent runs for the first time, it submits a certificate signing r
 [linuxhandbook](https://linuxhandbook.com/nginx-reverse-proxy-docker/)
 [phoenixnap](https://phoenixnap.com/kb/nmap-commands)
 [puppet](https://www.puppet.com/docs/puppet/5.5/install_linux.html)
+
+[opensuse doc](https://doc.opensuse.org/)
