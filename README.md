@@ -50,7 +50,7 @@
 - [**Other Tools**](https://github.com/KooshaYeganeh/OpenSuse4Developers#oher-tools)
     - [Docker](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-docker)  
     - [Android Debug Bridge](https://github.com/KooshaYeganeh/OpenSuse4Developers#android-debug-bridge)
-    - [Arduino]()
+    - [Arduino](https://github.com/KooshaYeganeh/OpenSuse4Developers#arduino)
 
 ---------------------------------------------------------------------------------------------------------------------------
 ### Security
@@ -174,26 +174,41 @@ exec zsh
 ```
 
 
+
+### Enable Packman Repository
+
+Packman is a collection of third-party repositories that offer various additional packages for openSUSE. It is the largest external repository of openSUSE packages.
+
+Packman repositories offer multimedia related applications and libraries, games, and network related applications, that are on the openSUSE Build Service application blacklist.
+
+
+
+**Essentials :** contains codecs and audio and video player applications.  
+**Multimedia :** contains additional many more multimedia related applications.  
+**Extra :** additional non-multimedia related applications, mostly network related.  
+**Games :** provides all types of games.
+
+To enable Packman Repository on openSUSE distribution, run the following command.
+
+
+```
+sudo zypper ar -cfp 90 http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_15.0/ packman
+```
+
 ### Multimedia Codec
 
 *After installing OpenSuse, we often see an error (h256 codec) that does not allow us to play videos.
 To solve this problem, we can either install VLC or follow the steps below:*
 
 ```
-sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/' packman
+zypper addrepo -f http://opensuse-guide.org/repo/openSUSE_Leap_15.0/ dvd
 ```
 
 ```
-sudo zypper addrepo -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/' packman
-```
+sudo zypper install ffmpeg lame gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer-plugins-ugly-orig-addon gstreamer-plugins-libav libdvdcss2 vlc-codecs
 
 ```
-sudo zypper refresh
-```
 
-```
-sudo zypper dist-upgrade --from packman --allow-vendor-change
-```
 
 ### Install TLP for Better Power Management
 
