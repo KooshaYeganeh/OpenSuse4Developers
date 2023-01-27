@@ -84,7 +84,7 @@
 
     - [Ansible](https://github.com/KooshaYeganeh/OpenSuse4Developers#ansible)
     - [Vagrant](https://github.com/KooshaYeganeh/OpenSuse4Developers#vagrant)
-    - [Puppet](Task automation and configuration management tools in Linux)
+    - [Puppet](https://github.com/KooshaYeganeh/OpenSuse4Developers#puppet)
     
 
 ----------------------------------------------------------------------------------------------------------------------------
@@ -2268,7 +2268,10 @@ sudo zypper install virtualbox
 
 ### Puppet
 
-**Before you begin**: [installing Puppet Server](https://puppet.com/docs/puppetserver/5.3/install_from_packages.html).
+**Before you begin -> 1-**: [installing Puppet Server](https://puppet.com/docs/puppetserver/5.3/install_from_packages.html).
+
+**or**
+**Before You begin -> 2-**:[Install puppet](https://www.liquidweb.com/kb/how-to-install-and-configure-puppet-on-centos-fedora-ubuntu-or-opensuse/)
 
 **1 -** Install a release package to enable Puppet Platform repositories.  
 
