@@ -11,7 +11,7 @@
 
 
 - [**Basic Tools**](https://github.com/KooshaYeganeh/OpenSuse4Developers#basic-tools)
-    - [**gcc**]()  
+    - [**gcc**](https://github.com/KooshaYeganeh/OpenSuse4Developers#gcc)  
     - [**Git**](https://github.com/KooshaYeganeh/OpenSuse4Developers#git)  
     - [**oh-my-zsh**](https://github.com/KooshaYeganeh/OpenSuse4Developers#zsh-and-oh-my-zsh)  
     - [**add Packman Repository**](https://github.com/KooshaYeganeh/OpenSuse4Developers#enable-packman-repository)  
