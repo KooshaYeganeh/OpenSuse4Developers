@@ -31,6 +31,7 @@
 - [**Database**](https://github.com/KooshaYeganeh/OpenSuse4Developers#databases)
     - [MariaDB](https://github.com/KooshaYeganeh/OpenSuse4Developers#mariadb)  
     - [SQLite3](https://github.com/KooshaYeganeh/OpenSuse4Developers#sqlite)
+    - [postgreSQL]()
 - [**WebServer**](https://github.com/KooshaYeganeh/OpenSuse4Developers#webservers)
     - [Nginx](https://github.com/KooshaYeganeh/OpenSuse4Developers#nginx)  
         - [Reverse Proxy with Nginx](https://github.com/KooshaYeganeh/OpenSuse4Developers#reverse-proxy-with-nginx)  
@@ -512,8 +513,59 @@ rm file.sqlite
 ```
 
 
+## postgreSQL
+
+PostgreSQL 10 is available to install on openSUSE from default repositories
+
+```
+sudo zypper install postgresql10-server  postgresql10
+```
+
+```
+sudo systemctl start postgresql
+```
+```
+sudo systemctl enable postgresql
+```
+```
+sudo systemctl status postgresql
+```
+
+First switch to the postgres user account, then access the postgres shell and set a new password for the default user as follows.
+
+```
+sudo su - postgres
+```
+
+```
+psql
+```
+
+```
+\password postgres
+```
+
+**Configuring PostgreSQL Database Server**
+
+```
+sudo vim /var/lib/pgsql/data/pg_hba.conf
+```
+
+Look for the following lines and change the authentication method to md5 as shown in the screenshot (refer to the official PostgreSQL 10 documentation to understand the different authentication methods).
 
 
+```
+# "local" is for Unix domain socket connections only 
+local   all             all                                     md5 
+# IPv4 local connections: 
+host    all             all             127.0.0.1/32            md5 
+# IPv6 local connections: 
+host    all             all             ::1/128                 md5
+```
+
+```
+sudo systemctl restart postgresql
+```
 
 
 --------------------------------------------------------------------------------------------------------------------------------
