@@ -568,6 +568,14 @@ sudo systemctl restart postgresql
 ```
 
 
+### influxDB
+
+
+```
+sudo zypper -n install influxdb
+```
+
+
 --------------------------------------------------------------------------------------------------------------------------------
 
 ## WebServers
