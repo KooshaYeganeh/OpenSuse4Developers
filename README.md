@@ -57,10 +57,10 @@
     - [Arduino](https://github.com/KooshaYeganeh/OpenSuse4Developers#arduino)
 
 - [**Details**](https://github.com/KooshaYeganeh/OpenSuse4Developers#details)
-    -[Automatically Clean Unused Temporary Files ](https://github.com/KooshaYeganeh/OpenSuse4Developers#automatically-clean-unused-temporary-files)
-    -[persiantools](https://github.com/KooshaYeganeh/OpenSuse4Developers#persiantools)
-        - [KYGnus JalaliDate](https://github.com/KooshaYeganeh/OpenSuse4Developers#kygnus-jalalidate)
-        - [persianFonts](https://github.com/KooshaYeganeh/OpenSuse4Developers#persian-fonts)
+    -[Automatically Clean Unused Temporary Files ](https://github.com/KooshaYeganeh/OpenSuse4Developers#automatically-clean-unused-temporary-files)  
+    -[persiantools](https://github.com/KooshaYeganeh/OpenSuse4Developers#persiantools)  
+    - [KYGnus JalaliDate](https://github.com/KooshaYeganeh/OpenSuse4Developers#kygnus-jalalidate)  
+    - [persianFonts](https://github.com/KooshaYeganeh/OpenSuse4Developers#persian-fonts)
 
 ---------------------------------------------------------------------------------------------------------------------------
 ### Security
