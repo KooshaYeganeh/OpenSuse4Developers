@@ -7,6 +7,7 @@
 
 ## Content List
 
+
 ### Desktop 
 
 
@@ -14,6 +15,7 @@
     - [**gcc**](https://github.com/KooshaYeganeh/OpenSuse4Developers#gcc)  
     - [**Git**](https://github.com/KooshaYeganeh/OpenSuse4Developers#git)  
     - [**oh-my-zsh**](https://github.com/KooshaYeganeh/OpenSuse4Developers#zsh-and-oh-my-zsh)  
+    - [**Tmux**]()  
     - [**add Packman Repository**](https://github.com/KooshaYeganeh/OpenSuse4Developers#enable-packman-repository)  
     - [**Multi Media codec**](https://github.com/KooshaYeganeh/OpenSuse4Developers#multimedia-codec)  
     - [**TLP**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-tlp-for-better-power-management)  
@@ -40,7 +42,7 @@
 ---------------------------------------------------------------------------------------------------------------------------
 
 - [**Network Tools**](https://github.com/KooshaYeganeh/OpenSuse4Developers#network-tools)
-    - [Namp](https://github.com/KooshaYeganeh/OpenSuse4Developers#namp)
+    - [Nmap](https://github.com/KooshaYeganeh/OpenSuse4Developers#nmap)
     - [tcpdump](https://github.com/KooshaYeganeh/OpenSuse4Developers#tcpdump)
     - [wireshark](https://github.com/KooshaYeganeh/OpenSuse4Developers#wireshark)
     - [iptraf-ng](https://github.com/KooshaYeganeh/OpenSuse4Developers#iptraf-ng)
@@ -53,6 +55,10 @@
     - [Docker](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-docker)  
     - [Android Debug Bridge](https://github.com/KooshaYeganeh/OpenSuse4Developers#android-debug-bridge)
     - [Arduino](https://github.com/KooshaYeganeh/OpenSuse4Developers#arduino)
+
+- [**Details**]()
+    -[Automatically Clean Unused Temporary Files ]()
+    -[persiantools]()
 
 ---------------------------------------------------------------------------------------------------------------------------
 ### Security
@@ -176,6 +182,13 @@ My .bashrc File:
 test -s ~/.alias && . ~/.alias || true
 
 exec zsh
+```
+
+
+### Tmux
+
+```
+sudo zypper -n install tmux 
 ```
 
 
@@ -332,68 +345,72 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 
 ```
+vi .vimrc
+```
 
-echo '''
-    set nocompatible              " required
-    filetype off                  " required
+**This is My vimrc File**
 
-    " set the runtime path to include Vundle and initialize
-    set rtp+=~/.vim/bundle/Vundle.vim
-    call vundle#begin()
-    "
-    " alternatively, pass a path where Vundle should install plugins
-    " call vundle#begin('~/some/path/here')
-    "
-    " let Vundle manage Vundle, required
-    Plugin 'gmarik/Vundle.vim'
-    Plugin 'vim-syntastic/syntastic'
-    Plugin 'nvie/vim-flake8'
-    Plugin 'vim-scripts/indentpython.vim'
-    Plugin 'scrooloose/nerdtree'
-    Plugin 'jistr/vim-nerdtree-tabs'
-    Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-    Plugin 'chriskempson/base16-vim'
-    Plugin 'wuelnerdotexe/vim-enfocado'
-    " add all your plugins here (note older versions of Vundle
-    " used Bundle instead of Plugin)
-    "
-    " ...
-    "
-    " All of your Plugins must be added before the following line
-    call vundle#end()            " required
-    filetype plugin indent on    " required
-
-    set encoding=utf-8
-
-    au BufNewFile,BufRead *.py
-        \set tabstop=4
-        \set softtabstop=4
-        \set shiftwidth=4
-        \set textwidth=79
-        \set expandtab
-        \set autoindent
-        \set fileformat=unix
+```
 
 
-    au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-    highlight BadWhitespace ctermbg=red guibg=darkred
+set nocompatible              " required
+filetype off                  " required
 
-    let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
-    let python_highlight_all=1
-    syntax on
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+"
+" alternatively, pass a path where Vundle should install plugins
+" call vundle#begin('~/some/path/here')
+"
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'nvie/vim-flake8'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'chriskempson/base16-vim'
+Plugin 'wuelnerdotexe/vim-enfocado'
+" add all your plugins here (note older versions of Vundle
+" used Bundle instead of Plugin)
+"
+" ...
+"
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+set encoding=utf-8
+
+au BufNewFile,BufRead *.py
+    \set tabstop=4
+    \set softtabstop=4
+    \set shiftwidth=4
+    \set textwidth=79
+    \set expandtab
+    \set autoindent
+    \set fileformat=unix
 
 
-    colorscheme desert
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+highlight BadWhitespace ctermbg=red guibg=darkred
 
-    set number
-    set showmatch
-    set history=1000
-    set undolevels=1000
-    set wildignore=*.swp,*.bak,*.pyc
-    set visualbell
-    set noerrorbells
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+let python_highlight_all=1
+syntax on
 
-''' >> ~/.vimrc
+
+colorscheme desert
+
+set number
+set showmatch
+set history=1000
+set undolevels=1000
+set wildignore=*.swp,*.bak,*.pyc
+set visualbell
+set noerrorbells
 
 
 ```
@@ -1131,6 +1148,127 @@ picocom is a minimal dumb-terminal emulation program.
 ```
 sudo zypper -n install picocom
 ```
+
+
+
+### Details
+
+#### Automatically Clean Unused Temporary Files
+
+```
+sudo systemctl status  'systemd-tmpfiles-*'
+```
+
+When the systemd-tmpfiles-setup service unit is started, it runs the systemd-tmpfiles –create –remove command. The command checks for configuration files from:
+
+/usr/lib/tmpfiles.d/.conf
+/run/tmpfiles.d/.conf
+/etc/tmpfiles.d/*.conf
+
+If there are files and directories marked for deletion in above configuration files, the’ll be removed. For the files and directories marked for creation, they are created with the correct permissions if necessary.
+
+
+```
+cat /usr/lib/systemd/system/systemd-tmpfiles-clean.timer
+```
+
+Result:
+
+```
+#  This file is part of systemd.
+#
+#  systemd is free software; you can redistribute it and/or modify it
+#  under the terms of the GNU Lesser General Public License as published by
+#  the Free Software Foundation; either version 2.1 of the License, or
+#  (at your option) any later version.
+
+[Unit]
+Description=Daily Cleanup of Temporary Directories
+Documentation=man:tmpfiles.d(5) man:systemd-tmpfiles(8)
+
+[Timer]
+OnBootSec=15min
+OnUnitActiveSec=1d
+```
+
+In above example, the systemd-tmpfiles-clean.service will be triggered 15 minutes after the system has booted up. Any other trigger happens 24 hours after the last service trigger. You can adjust the values to your liking.
+
+If you make a change, ensure you reload service.
+
+```
+sudo systemctl daemon-reload
+```
+```
+sudo systemctl enable --now systemd-tmpfiles-clean.timer
+```
+
+**How To Manually Clean Temporary Files**
+
+Let’s configure systemd-tmpfiles to clean the /mytmp directory. This will ensure the directory does not contain files that that have not been used in the last 3 days.
+
+You can copy the example configuration file and update it – /usr/lib/tmpfiles.d/tmp.conf
+
+Edit the file like below.
+
+```
+sudo vim /etc/tmpfiles.d/mytmp.conf
+```
+
+Result:
+```
+See tmpfiles.d(5) for details
+# Clear tmp directories separately, to make them easier to override
+q /mytmp 1777 root root 3d
+```
+
+If you want to ensure a directoty exist with correct owneship, create a configuration like below.
+
+```
+d /run/mytmp 0700 root root 60s
+```
+
+Any file in this directory that remains unused in the last 60 seconds must be purged.
+
+Once the file is created, use the following command to ensure the file contains the appropriate configuration.
+
+
+
+```
+sudo systemd-tmpfiles --create /etc/tmpfiles.d/mytmp.conf
+```
+
+
+If you don’t see any error in the output, then the it confirms that the configuration settings are correct. You can invoke a manual clean anytime with the command:
+
+
+```
+sudo systemd-tmpfiles --clean /etc/tmpfiles.d/mytmp.conf
+```
+
+
+
+#### PersianTools
+
+##### KYGnus JalaliDate
+
+```
+cd /tmp && wget https://github.com/KooshaYeganeh/SUSE-JalaliDate/archive/refs/heads/main.zip && unzip main.zip && cd SUSE-JalaliDate.main && sudo cp mycal /usr/bin && rm main.zip && echo "mycal installed [ OK ]"
+```
+
+After installation, just enter the mycal command in the terminal
+
+#### Persian Fonts
+
+1- Downlod:  
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/fzerorubigd/persian-fonts-linux/master/farsifonts.sh)"
+```
+
+2- unzip Files
+
+3- Move ttf Files to /usr/share/fonts Directory
+
 
 ## Security
 
