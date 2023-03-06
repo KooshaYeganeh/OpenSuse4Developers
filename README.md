@@ -15,7 +15,7 @@
     - [**gcc**](https://github.com/KooshaYeganeh/OpenSuse4Developers#gcc)  
     - [**Git**](https://github.com/KooshaYeganeh/OpenSuse4Developers#git)  
     - [**oh-my-zsh**](https://github.com/KooshaYeganeh/OpenSuse4Developers#zsh-and-oh-my-zsh)  
-    - [**Tmux**]()  
+    - [**Tmux**](https://github.com/KooshaYeganeh/OpenSuse4Developers#tmux)  
     - [**add Packman Repository**](https://github.com/KooshaYeganeh/OpenSuse4Developers#enable-packman-repository)  
     - [**Multi Media codec**](https://github.com/KooshaYeganeh/OpenSuse4Developers#multimedia-codec)  
     - [**TLP**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-tlp-for-better-power-management)  
@@ -56,9 +56,11 @@
     - [Android Debug Bridge](https://github.com/KooshaYeganeh/OpenSuse4Developers#android-debug-bridge)
     - [Arduino](https://github.com/KooshaYeganeh/OpenSuse4Developers#arduino)
 
-- [**Details**]()
-    -[Automatically Clean Unused Temporary Files ]()
-    -[persiantools]()
+- [**Details**](https://github.com/KooshaYeganeh/OpenSuse4Developers#details)
+    -[Automatically Clean Unused Temporary Files ](https://github.com/KooshaYeganeh/OpenSuse4Developers#automatically-clean-unused-temporary-files)
+    -[persiantools](https://github.com/KooshaYeganeh/OpenSuse4Developers#persiantools)
+        - [KYGnus JalaliDate](https://github.com/KooshaYeganeh/OpenSuse4Developers#kygnus-jalalidate)
+        - [persianFonts](https://github.com/KooshaYeganeh/OpenSuse4Developers#persian-fonts)
 
 ---------------------------------------------------------------------------------------------------------------------------
 ### Security
@@ -186,6 +188,11 @@ exec zsh
 
 
 ### Tmux
+
+Tmux is a terminal multiplexer: it’s like a power-up for terminal programming. You can manage several terminals under a session, split terminal screens, detach and re-attach sessions and much more. If you do most of your programming at the command line, you’ll find using a terminal multiplexer invaluable.
+
+![tmux](https://www.perl.com/images/an-introduction-to-tmux/tmux-panes.png)
+
 
 ```
 sudo zypper -n install tmux 
@@ -1257,7 +1264,7 @@ cd /tmp && wget https://github.com/KooshaYeganeh/SUSE-JalaliDate/archive/refs/he
 
 After installation, just enter the mycal command in the terminal
 
-#### Persian Fonts
+##### Persian Fonts
 
 1- Downlod:  
 
