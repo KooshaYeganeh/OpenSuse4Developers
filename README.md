@@ -55,7 +55,7 @@
     - [Docker](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-docker)  
     - [Android Debug Bridge](https://github.com/KooshaYeganeh/OpenSuse4Developers#android-debug-bridge)
     - [Arduino](https://github.com/KooshaYeganeh/OpenSuse4Developers#arduino)
-
+    - [SELinux]()
 - [**Details**](https://github.com/KooshaYeganeh/OpenSuse4Developers#details)
     - [Automatically Clean Unused Temporary Files ](https://github.com/KooshaYeganeh/OpenSuse4Developers#automatically-clean-unused-temporary-files)  
     - [persiantools](https://github.com/KooshaYeganeh/OpenSuse4Developers#persiantools)  
@@ -1275,6 +1275,20 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/fzerorubigd/persian-fonts-
 2- unzip Files
 
 3- Move ttf Files to /usr/share/fonts Directory
+
+### Selinux
+
+install SeLinux on Opensuse Leap 15.4
+
+```
+sudo zypper addrepo https://download.opensuse.org/repositories/security:SELinux/15.4/security:SELinux.repo
+```
+```
+sudo zypper refresh
+```
+```
+sudo zypper install selinux-policy
+```
 
 
 ## Security
@@ -2557,7 +2571,7 @@ for more Info to Optimize Opensuse Read Document Below:
 
 [linuxcapable](https://www.linuxcapable.com/how-to-install-and-use-maldet-on-ubuntu-20-04/)
 
-[redhat](https://www.redhat.com/sysadmin/sshfs)
+[RedHat](https://www.redhat.com/sysadmin/sshfs)
 
 [redelijkheid](https://www.redelijkheid.com/blog/2017/1/29/configure-nginx-as-a-secure-reverse-proxy)
 
@@ -2566,3 +2580,5 @@ for more Info to Optimize Opensuse Read Document Below:
 [puppet](https://www.puppet.com/docs/puppet/5.5/install_linux.html)
 
 [OpenSuse doc](https://doc.opensuse.org/)
+
+[computingforgeeks](https://computingforgeeks.com/automatically-clean-unused-temporary-files-in-linux/)
