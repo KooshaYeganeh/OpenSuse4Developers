@@ -89,16 +89,27 @@
 
 ----------------------------------------------------------------------------------------------------------------------------
 
-- [**Task automation and configuration management tools in Linux**](https://github.com/KooshaYeganeh/OpenSuse4Developers#task-automation-and-configuration-management-tools-in-linux)
+- [**Devops Tools**](https://github.com/KooshaYeganeh/OpenSuse4Developers#devops-tools)
 
     - [Ansible](https://github.com/KooshaYeganeh/OpenSuse4Developers#ansible)
     - [Vagrant](https://github.com/KooshaYeganeh/OpenSuse4Developers#vagrant)
     - [Puppet](https://github.com/KooshaYeganeh/OpenSuse4Developers#puppet)
+    - [Terraform]()
     
 
 ----------------------------------------------------------------------------------------------------------------------------
 
 - [**Optimization**](https://github.com/KooshaYeganeh/OpenSuse4Developers#optimization)
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+
+- [**Commonly used tools**]()
+    - [wordpress]()
+    - [Engineering]()
+
 
 ## Basic Tools
 
@@ -1288,6 +1299,9 @@ sudo zypper refresh
 ```
 ```
 sudo zypper install selinux-policy
+```
+```
+sudo zypper in selinux-policy-targeted selinux-policy-devel selinux-autorelabel
 ```
 
 
@@ -2580,5 +2594,7 @@ for more Info to Optimize Opensuse Read Document Below:
 [puppet](https://www.puppet.com/docs/puppet/5.5/install_linux.html)
 
 [OpenSuse doc](https://doc.opensuse.org/)
+
+[SeLinux Documentation](https://doc.opensuse.org/documentation/leap/security/html/book-security/cha-selinux.html)
 
 [computingforgeeks](https://computingforgeeks.com/automatically-clean-unused-temporary-files-in-linux/)
