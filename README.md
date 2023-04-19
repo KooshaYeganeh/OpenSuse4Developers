@@ -14,7 +14,7 @@
 - [**Basic Tools**](https://github.com/KooshaYeganeh/OpenSuse4Developers#basic-tools)
     - [**gcc**](https://github.com/KooshaYeganeh/OpenSuse4Developers#gcc)  
     - [**Git**](https://github.com/KooshaYeganeh/OpenSuse4Developers#git)
-    - [**Mercurial**]()  
+    - [**Mercurial**](https://github.com/KooshaYeganeh/OpenSuse4Developers#mercurial)  
     - [**oh-my-zsh**](https://github.com/KooshaYeganeh/OpenSuse4Developers#zsh-and-oh-my-zsh)  
     - [**Tmux**](https://github.com/KooshaYeganeh/OpenSuse4Developers#tmux)  
     - [**add Packman Repository**](https://github.com/KooshaYeganeh/OpenSuse4Developers#enable-packman-repository)  
@@ -117,7 +117,7 @@
         - [Download and configure](https://github.com/KooshaYeganeh/OpenSuse4Developers#step-2-download-and-configure-wordpress)
         - [configure Apache](https://github.com/KooshaYeganeh/OpenSuse4Developers#step-3-configure-apache-virtualhost-for-wordpress)
     
-    - [Engineering]()
+    - [Engineering](https://github.com/KooshaYeganeh/OpenSuse4Developers#engineering)
 
 
 ## Basic Tools
