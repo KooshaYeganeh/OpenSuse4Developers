@@ -13,7 +13,8 @@
 
 - [**Basic Tools**](https://github.com/KooshaYeganeh/OpenSuse4Developers#basic-tools)
     - [**gcc**](https://github.com/KooshaYeganeh/OpenSuse4Developers#gcc)  
-    - [**Git**](https://github.com/KooshaYeganeh/OpenSuse4Developers#git)  
+    - [**Git**](https://github.com/KooshaYeganeh/OpenSuse4Developers#git)
+    - [**Mercurial**]()  
     - [**oh-my-zsh**](https://github.com/KooshaYeganeh/OpenSuse4Developers#zsh-and-oh-my-zsh)  
     - [**Tmux**](https://github.com/KooshaYeganeh/OpenSuse4Developers#tmux)  
     - [**add Packman Repository**](https://github.com/KooshaYeganeh/OpenSuse4Developers#enable-packman-repository)  
@@ -106,13 +107,15 @@
 ----------------------------------------------------------------------------------------------------------------------------
 
 
-- [**Commonly Used Tools**]()
-    - [wordpress]()
-        - [Lamp]()
-            - [Apache]()
-            - [MariaDB]()
-            - [php]()
-        - [procedures] 
+- [**Commonly Used Tools**](https://github.com/KooshaYeganeh/OpenSuse4Developers#commonly-used-tools)
+    - [wordpress](https://github.com/KooshaYeganeh/OpenSuse4Developers#wordpress)
+        - [Apache](https://github.com/KooshaYeganeh/OpenSuse4Developers#installing-apache-http-server)
+        - [MariaDB](https://github.com/KooshaYeganeh/OpenSuse4Developers#installing-mariadb-database-server)
+        - [php](https://github.com/KooshaYeganeh/OpenSuse4Developers#installing-php-and-php-modules)
+        
+        - [Create Database](https://github.com/KooshaYeganeh/OpenSuse4Developers#step-1-create-a-database-for-wordpress)
+        - [Download and configure](https://github.com/KooshaYeganeh/OpenSuse4Developers#step-2-download-and-configure-wordpress)
+        - [configure Apache](https://github.com/KooshaYeganeh/OpenSuse4Developers#step-3-configure-apache-virtualhost-for-wordpress)
     
     - [Engineering]()
 
@@ -1737,6 +1740,14 @@ sudo zypper -n install git
 ```
 
 
+### Mercurial
+
+> Mercurial is a free, distributed source control management tool. It efficiently handles projects of any size and offers an easy and intuitive interface.
+
+
+```
+sudo zypper -n install mercurial
+```
 
 ### TCP wrappers
 
@@ -2706,7 +2717,9 @@ sudo systemctl restart apache2
 
 
 
+### Engineering
 
+[Engineering Tools](https://github.com/KooshaYeganeh/suse-Engineer)
 
 
 
