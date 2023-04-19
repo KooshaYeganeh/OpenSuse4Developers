@@ -106,8 +106,14 @@
 ----------------------------------------------------------------------------------------------------------------------------
 
 
-- [**Commonly used tools**]()
+- [**Commonly Used Tools**]()
     - [wordpress]()
+        - [Lamp]()
+            - [Apache]()
+            - [MariaDB]()
+            - [php]()
+        - [procedures] 
+    
     - [Engineering]()
 
 
@@ -2469,7 +2475,7 @@ sh /usr/local/ddos/ddos.sh -c
 sudo zypper -n install munin
 ```
 
-## Task automation and configuration management tools in Linux
+## Devops Tools
 
 
 ### Ansible
@@ -2572,6 +2578,137 @@ sudo tuned-adm profile balanced
 for more Info to Optimize Opensuse Read Document Below:
 
 [System Analysis and Tuning Guide](https://doc.opensuse.org/documentation/leap/tuning/single-html/book-tuning/)
+
+
+
+
+
+## Commonly Used Tools
+
+### wordpress
+
+#### Installing Apache HTTP Server
+
+```
+sudo zypper install apache2
+```
+
+```
+sudo systemctl start apache2 && sudo systemctl enable apache2 && sudo systemctl status apache2
+```
+
+
+```
+sudo firewall-cmd --permanent --add-port=80/tcp && sudo firewall-cmd --permanent --add-port=443/tcp && sudo firewall-cmd --reload
+```
+
+
+#### Installing MariaDB Database Server
+
+```
+sudo zypper install mariadb mariadb-client 
+```
+
+```
+sudo systemctl start mariadb  && sudo systemctl enable mariadb && sudo systemctl status mariadb 
+```
+
+
+‍‍
+‍‍```
+sudo mysql_secure_installation 
+‍‍‍```
+
+Once the script is invoked, carefully read the description at each step. You should set a strong root user password, remove anonymous users, disable remote root access, remove the test database and access to it and finally reload privileges table.
+
+
+#### Installing PHP and PHP Modules
+
+
+```
+sudo zypper install php php-mysql php-gd php-mbstring apache2-mod_php7
+```
+
+```
+sudo a2enmod php7
+```
+```
+sudo systemctl restart apache2
+```
+
+```
+echo "<?php phpinfo(); ?>" | sudo tee  /srv/www/htdocs/info.php
+```
+
+#### Install Wordpress
+
+##### Step 1. Create a Database for WordPress
+
+
+```
+mysql -u root -p
+```
+```
+CREATE DATABASE wordpress_db;
+```
+```
+GRANT ALL PRIVILEGES ON wordpress_db.* TO 'wordpress_user' IDENTIFIED BY 'P@ssword321';
+```
+
+```
+FLUSH PRIVILEGES;
+```
+```
+exit;
+```
+
+##### Step 2: Download and Configure WordPress
+
+```
+wget http://wordpress.org/latest.tar.gz
+```
+
+```
+tar -xvf latest.tar.gz &&  mv wordpress/ /srv/www/htdocs/ && sudo cp /srv/www/htdocs/wordpress/wp-config-sample.php /srv/www/htdocs/wordpress/wp-config.php 
+```
+
+```
+sudo vim /srv/www/htdocs/wordpress/wp-config.php
+```
+
+![wpconfig](https://www.tecmint.com/wp-content/uploads/2015/03/Configure-WordPress-Database-Settings.png)
+
+```
+sudo chown -R wwwrun:www /srv/www/htdocs/ && sudo chmod 775 -R /srv/www/htdocs/
+```
+
+
+##### Step 3. Configure Apache Virtualhost for WordPress
+
+```
+sudo vim /etc/apache2/conf.d/wordpress.conf
+```
+
+```
+<virtualhost *:80>
+servername example.com
+documentroot "/srv/www/htdocs/wordpress/"
+<directory "/srv/www/htdocs/">
+AllowOverride All
+Require all granted
+</directory>
+</virtualhost>
+```
+
+```
+sudo systemctl restart apache2
+```
+
+
+
+
+
+
 
 ## Sources
 
