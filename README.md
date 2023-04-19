@@ -145,6 +145,15 @@ sudo zypper remove git-gui
 ```
 
 
+### Mercurial
+
+> Mercurial is a free, distributed source control management tool. It efficiently handles projects of any size and offers an easy and intuitive interface.
+
+
+```
+sudo zypper -n install mercurial
+```
+
 
 
 ### Zsh and oh-my-zsh 
@@ -1740,14 +1749,7 @@ sudo zypper -n install git
 ```
 
 
-### Mercurial
 
-> Mercurial is a free, distributed source control management tool. It efficiently handles projects of any size and offers an easy and intuitive interface.
-
-
-```
-sudo zypper -n install mercurial
-```
 
 ### TCP wrappers
 
