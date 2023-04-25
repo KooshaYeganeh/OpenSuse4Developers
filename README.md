@@ -87,15 +87,15 @@
 - [**Change Default MariaDB Port**](https://github.com/KooshaYeganeh/OpenSuse4Developers#change-mariadb-default-port)
 - [** DDOS Deflate**]()
 
-### IDS
+### IDS 
 
-- [**Suricata**]()
-- [**Zeek**]()
+- [**Suricata**](https://github.com/KooshaYeganeh/OpenSuse4Developers#suricata)
+- [**Zeek**](https://github.com/KooshaYeganeh/OpenSuse4Developers#zeek)
 
 ### Monitoring
 
 - [**Munin**](https://github.com/KooshaYeganeh/OpenSuse4Developers#minun)
-- [**Zabbix**]()
+- [**Zabbix**](https://github.com/KooshaYeganeh/OpenSuse4Developers#zabbix)
 
 ----------------------------------------------------------------------------------------------------------------------------
 
