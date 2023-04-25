@@ -89,7 +89,6 @@
 
 ### IDS
 
-- [**Snort**]()
 - [**Suricata**]()
 - [**Zeek**]()
 
