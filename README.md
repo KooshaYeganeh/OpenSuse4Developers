@@ -84,9 +84,19 @@
 - [**sshfs**](https://github.com/KooshaYeganeh/OpenSuse4Developers#sshfs)  
 - [**USBGuard**](https://github.com/KooshaYeganeh/OpenSuse4Developers#usbguard)  
 - [**MySQL Tuner**](https://github.com/KooshaYeganeh/OpenSuse4Developers#mysql-tuner)  
-- [**Change Default MariaDB Port**](https://github.com/KooshaYeganeh/OpenSuse4Developers#change-mariadb-default-port)  
-- [**Munin**](https://github.com/KooshaYeganeh/OpenSuse4Developers#minun)
+- [**Change Default MariaDB Port**](https://github.com/KooshaYeganeh/OpenSuse4Developers#change-mariadb-default-port)
+- [** DDOS Deflate**]()
 
+### IDS
+
+- [**Snort**]()
+- [**Suricata**]()
+- [**Zeek**]()
+
+### Monitoring
+
+- [**Munin**](https://github.com/KooshaYeganeh/OpenSuse4Developers#minun)
+- [**Zabbix**]()
 
 ----------------------------------------------------------------------------------------------------------------------------
 
@@ -108,7 +118,7 @@
 
 
 - [**Commonly Used Tools**](https://github.com/KooshaYeganeh/OpenSuse4Developers#commonly-used-tools)
-    - [wordpress](https://github.com/KooshaYeganeh/OpenSuse4Developers#wordpress)
+    - [Wordpress](https://github.com/KooshaYeganeh/OpenSuse4Developers#wordpress)
         - [Apache](https://github.com/KooshaYeganeh/OpenSuse4Developers#installing-apache-http-server)
         - [MariaDB](https://github.com/KooshaYeganeh/OpenSuse4Developers#installing-mariadb-database-server)
         - [php](https://github.com/KooshaYeganeh/OpenSuse4Developers#installing-php-and-php-modules)
@@ -2474,10 +2484,286 @@ sh /usr/local/ddos/ddos.sh -c
 
 
 
+### IDS
+
+
+
+#### Suricata
+
+```
+zypper install -n wget tar gcc pkg-config pcre-devel libyaml-devel \
+    libpcap-devel zlib-devel file-devel make libnetfilter_queue-devel \
+    libjansson-devel mozilla-nss-devel libcap-ng-devel lua53-devel
+```
+
+
+**Suricata 4**
+
+```
+wget https://www.openinfosecfoundation.org/download/suricata-4.0.5.tar.gz
+```
+```
+tar -xvf suricata-4.0.5.tar.gz
+```
+```
+cd suricata-4.0.5
+```
+
+For **Leap 15**
+
+```
+CPPFLAGS="-I/usr/include/libnetfilter_queue/ -I/usr/include/libnfnetlink/" ./configure \
+    --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-nfqueue --enable-lua
+```
+
+**Suricata 3**
+
+```
+wget http://www.openinfosecfoundation.org/download/suricata-3.1.tar.gz
+```
+```
+tar -xvzf suricata-3.1.tar.gz
+```
+
+```
+cd suricata-3.1
+```
+
+
+**Make**
+
+```
+make
+```
+```
+sudo make install
+```
+```
+sudo ldconfig
+```
+
+
+**Auto setup**
+
+You can also use the available auto setup features of Suricata:
+
+ex:
+
+```
+make install-conf
+```
+
+make install-conf
+will do the regular "make install" and then it will automatically create/setup all the necessary directories and suricata.yaml for you.
+
+```
+make install-rules
+```
+make install-rules
+will do the regular "make install" and then it will automatically download and set up the latest ruleset from Emerging Threats available for Suricata
+
+```
+make install-full
+```
+
+make install-full
+will combine everything mentioned above (install-conf and install-rules) - and will present you with a ready to run (configured and set up) Suricata
+
+
+
+
+**Basic Setup**
+
+When using Debian or FreeBSD, make sure you enter all commands as root/super-user because for these operating systems it is not possible to use 'sudo' without installing and configuring it first.
+
+Start with creating a directory for Suricata's log information.
+
+```
+sudo mkdir /var/log/suricata
+```
+
+To prepare the system for using it, enter:
+
+```
+sudo mkdir /etc/suricata
+```
+
+The next step is to copy classification.config, reference.config and suricata.yaml from the base build/installation directory (ex. from git it will be the oisf directory) to the /etc/suricata directory. Do so by entering the following:
+
+```
+sudo cp classification.config /etc/suricata
+sudo cp reference.config /etc/suricata
+sudo cp suricata.yaml /etc/suricata
+```
+
+**Auto setup**
+
+You can also use the available auto setup features of Suricata:
+
+ex:
+
+```
+./configure && make && make install-conf
+```
+
+The make install-conf option will do the regular "make install" and then automatically create/setup all the necessary directories and suricata.yaml.
+
+```
+./configure && make && make install-rules
+```
+
+The make install-rules option will do the regular "make install" and it automatically downloads and sets up the latest ruleset from Emerging Threats available for Suricata
+
+```
+./configure && make && make install-full
+```
+
+The make install-full option combines everything mentioned above (install-conf and install-rules) - and will present you with a ready to run (configured and set up) Suricata
+
+
+
+**Setting variables**
+
+Make sure every variable of the vars, address-groups and port-groups in the yaml file is set correctly for your needs. A full explanation is available in the Rule vars section of the yaml. You need to set the ip-address(es) of your local network at HOME_NET. It is recommended to set EXTERNAL_NET to !$HOME_NET. This way, every ip-address but the one set at HOME_NET will be treated as external. It is also possible to set EXTERNAL_NET to 'any', only the recommended setting is more precise and lowers the chance that false positives will be generated. HTTP_SERVERS, SMTP_SERVERS, SQL_SERVERS, DNS_SERVERS and TELNET_SERVERS are by default set to HOME_NET. AIM_SERVERS is by default set at 'any'. These variables have to be set for servers on your network. All settings have to be set to let it have a more accurate effect.
+
+Next, make sure the following ports are set to your needs: HTTP_PORTS, SHELLCODE_PORTS, ORACLE_PORTS and SSH_PORTS.
+
+
+```
+  windows:[]
+  bsd: [] 
+  bsd-right: [] 
+  old-linux: [] 
+  linux: [10.0.0.0/8, 192.168.1.100, "8762:2352:6241:7245:E000:0000:0000:0000"] 
+  old-solaris: [] 
+  solaris: ["::1"] 
+  hpux10: [] 
+  hpux11: [] 
+  irix: [] 
+  macos: [] 
+  vista: [] 
+  windows2k3: []
+
+  ```
+
+
+  **Rule set management and download**
+
+[Rule Management with suricata-update](https://suricata-update.readthedocs.io/en/latest)
+
+or just download and untar the ruleset in a directory of your choosing (or yaml config setting) from here:
+
+[http://rules.emergingthreats.net/open/suricata/](http://rules.emergingthreats.net/open/suricata/)
+
+
+or if you prefer you can download and use a VRT ruleset.
+
+It is recommended to update your rules frequently. Emerging Threats is modified daily, VRT is updated weekly or multiple times a week.
+
+
+**Interface cards**
+
+To check the available interface cards, enter:
+
+```
+ifconfig
+```
+
+Now you can see which one you would like Suricata to use.
+
+To start the engine and include the interface card of your preference, enter:
+Tests for errors rule Very recommended --init-errors-fatal
+
+
+```
+sudo suricata -c /etc/suricata/suricata.yaml -i wlan0 --init-errors-fatal
+```
+
+
+Instead of wlan0, you can enter the interface card of your preference.
+
+To see if the engine is working correctly and receives and inspects traffic, enter:
+
+```
+cd /var/log/suricata
+```
+
+Followed by:
+
+```
+tail http.log
+```
+
+And:
+
+```
+tail -n 50 stats.log
+```
+
+To make sure the information displayed is up-dated in real time, use the -f option before http.log and stats.log:
+
+```
+tail -f http.log stats.log
+```
+
+
+
+
+[Writing Effective Suricata Rules with Examples](https://resources.infosecinstitute.com/topic/using-zeek-for-network-analysis-and-detections/)
+
+
+#### Zeek
+
+
+Install Zeek on SUSE 15.4
+
+```
+sudo zypper addrepo https://download.opensuse.org/repositories/security:zeek/15.4/security:zeek.repo
+```
+
+```
+sudo zypper refresh
+```
+
+```
+sudo zypper install zeek-lts
+```
+
+Install Zeek on openSUSE Leap 15.4
+
+```
+sudo zypper addrepo https://download.opensuse.org/repositories/security:zeek/openSUSE_Leap_15.4/security:zeek.repo
+```
+
+```
+sudo zypper refresh
+```
+
+```
+sudo zypper install zeek-lts
+```
+
+
+Install Zeek on SLE 15 SP3
+
+```
+sudo zypper addrepo https://download.opensuse.org/repositories/security:zeek/SLE_15_SP3/security:zeek.repo
+```
+
+```
+zypper refresh
+```
+```
+zypper install zeek-lts
+```
+
+
+[Zeek info](https://resources.infosecinstitute.com/topic/using-zeek-for-network-analysis-and-detections/)
+
 
 ### Monitoring
 
-#### Minun
+#### Munin
 
 ![munin](https://munin-monitoring.org/assets/img/screenshot.png)
 
@@ -2487,6 +2773,95 @@ sh /usr/local/ddos/ddos.sh -c
 ```
 sudo zypper -n install munin
 ```
+
+#### Zabbix
+
+
+1- Install Zabbix repository
+
+```
+rpm -Uvh --nosignature https://repo.zabbix.com/zabbix/6.4/sles/15/x86_64/zabbix-release-6.4-1.sles15.noarch.rpm
+```
+```
+zypper --gpg-auto-import-keys refresh 'Zabbix Official Repository'
+```
+
+2- Activate Web and Scripting Module
+
+```
+SUSEConnect -p sle-module-web-scripting/15/x86_64
+```
+The actual URL for web scripting module may be different depending on particular service pack. Use the following command to determine the right one.
+
+
+```
+SUSEConnect --list-extensions
+```
+
+3- Install Zabbix server, frontend, agent
+
+```
+zypper in zabbix-server-mysql zabbix-web-mysql zabbix-apache-conf-php8 zabbix-sql-scripts zabbix-agent
+```
+
+
+4- Create initial database
+
+Make sure you have database server up and running.
+
+Run the following on your database host.
+
+```
+
+# mysql -uroot -p
+password
+mysql> create database zabbix character set utf8mb4 collate utf8mb4_bin;
+mysql> create user zabbix@localhost identified by 'password';
+mysql> grant all privileges on zabbix.* to zabbix@localhost;
+mysql> set global log_bin_trust_function_creators = 1;
+mysql> quit;
+
+```
+
+n Zabbix server host import initial schema and data. You will be prompted to enter your newly created password.
+
+```
+zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -p zabbix
+```
+
+Disable log_bin_trust_function_creators option after importing database schema.
+
+
+```
+# mysql -uroot -p
+password
+mysql> set global log_bin_trust_function_creators = 0;
+mysql> quit;
+```
+
+5- Configure the database for Zabbix server
+
+Edit file /etc/zabbix/zabbix_server.conf
+
+```
+DBPassword=password
+```
+
+6- Start Zabbix server and agent processes
+
+Start Zabbix server and agent processes and make it start at system boot.
+
+```
+systemctl restart zabbix-server zabbix-agent apache2
+```
+```
+systemctl enable zabbix-server zabbix-agent apache2
+```
+
+7- Open Zabbix UI web page
+The default URL for Zabbix UI when using Apache web server is http://host/zabbix
+
+
 
 ## Devops Tools
 
