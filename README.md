@@ -467,6 +467,14 @@ and then go to start vim and type PluginInstall to Install All Extensions on Vim
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
+## Vlang
+
+```
+git clone https://github.com/vlang/v && cd v && make && sudo ./v symlink
+```
+
+---------------------------------------------------------------------------------------------------------------------------------
+
 ## Databases
 
 ## MariaDB
