@@ -135,7 +135,7 @@
 ### gcc
 
 ```
-sudo zypper -n install gcc
+sudo zypper -n install gcc build-essential cmake3 python3-dev python3-devel
 ```
 
 
