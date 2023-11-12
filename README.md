@@ -137,6 +137,9 @@
 ```
 sudo zypper -n install gcc build-essential cmake3 python3-dev python3-devel
 ```
+```
+udo zypper addrepo https://download.opensuse.org/repositories/windows:mingw:win64/openSUSE_Leap_15.5/windows:mingw:win64.repo && sudo zypper refresh && sudo zypper install mingw64-gcc
+```
 
 
 ### Git
