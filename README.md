@@ -64,6 +64,11 @@
     - [persianFonts](https://github.com/KooshaYeganeh/OpenSuse4Developers#persian-fonts)
 
 ---------------------------------------------------------------------------------------------------------------------------
+- [**Desktops**]()
+    - [i3]()
+    - [Gnome]()
+    - [kde]()
+---------------------------------------------------------------------------------------------------------------------------
 ### Security
 
 - [**ClamAV**](https://github.com/KooshaYeganeh/OpenSuse4Developers#clamav)  
@@ -1341,6 +1346,31 @@ sudo zypper install selinux-policy
 ```
 sudo zypper in selinux-policy-targeted selinux-policy-devel selinux-autorelabel
 ```
+
+
+## Desktops
+
+### i3
+
+
+```
+sudo zypper install i3 dmenu i3status
+```
+
+For sample config check my i3 config at this Link
+
+```
+cd /tmp && wget https://github.com/KooshaYeganeh/i3wm/archive/refs/heads/main.zip && unzip main.zip && cd i3wm-main && cp i3config ~/.config/i3/config && mkdir ~/.config/i3status && cp i3statusconfig ~/.config/i3status/config && cd && echo "i3 Installed and Configured [ OK ]"
+```
+
+
+### Gnome
+
+
+
+
+### KDE
+
 
 
 ## Security
@@ -3108,6 +3138,14 @@ sudo systemctl restart apache2
 
 [Engineering Tools](https://github.com/KooshaYeganeh/suse-Engineer)
 
+
+### Report Bugs
+
+If after Updating OpenSuse 15.5 you have a problem with no sound in the system, run this command
+
+```
+sudo zypper -n install  sof-firmware && sudo /sbin/ldconfig -v /usr/lib64/audacity
+```
 
 
 ## Sources
