@@ -20,7 +20,8 @@
     - [**add Packman Repository**](https://github.com/KooshaYeganeh/OpenSuse4Developers#enable-packman-repository)  
     - [**Multi Media codec**](https://github.com/KooshaYeganeh/OpenSuse4Developers#multimedia-codec)  
     - [**TLP**](https://github.com/KooshaYeganeh/OpenSuse4Developers#install-tlp-for-better-power-management)  
-    - [**lshw**](https://github.com/KooshaYeganeh/OpenSuse4Developers#lshw)  
+    - [**lshw**](https://github.com/KooshaYeganeh/OpenSuse4Developers#lshw)
+    - [**SUSE-Package Manager**]()  
     - [**vpn**](https://github.com/KooshaYeganeh/OpenSuse4Developers#vpn)  
         - [openconnect](https://github.com/KooshaYeganeh/OpenSuse4Developers#openconnect)  
         - [openvpn](https://github.com/KooshaYeganeh/OpenSuse4Developers#openvpn)  
@@ -90,7 +91,7 @@
 - [**USBGuard**](https://github.com/KooshaYeganeh/OpenSuse4Developers#usbguard)  
 - [**MySQL Tuner**](https://github.com/KooshaYeganeh/OpenSuse4Developers#mysql-tuner)  
 - [**Change Default MariaDB Port**](https://github.com/KooshaYeganeh/OpenSuse4Developers#change-mariadb-default-port)
-- [** DDOS Deflate**]()
+- [**DDOS Deflate**](https://github.com/KooshaYeganeh/OpenSuse4Developers#ddos-deflate)
 
 ### IDS 
 
@@ -317,6 +318,19 @@ Lshw is a nifty small command line utility that generates detailed reports about
 ```
 sudo zypper -n install lshw
 ```
+
+
+
+### SUSE Package Manager
+
+Simplified Package Manager for **openSUSE**
+
+‍‍‍```
+wget https://codeload.github.com/KooshaYeganeh/suse/zip/refs/heads/main && unzip suse-main.zip && cd suse-main && ./Install && if [ -f "/opt/script/suse" ];then echo "suse Package Manager Installed [ OK ]" ; else echo "suse Package Manager is Not Installed [ ERROR ]" ;fi 
+```
+‍‍‍
+
+
 
 ### VPN
 
@@ -2973,6 +2987,17 @@ For other settings you might want to change, see a list of agent-related setting
     Run sudo /opt/puppetlabs/bin/puppet cert sign <NAME> to sign a request.
 
 As each Puppet agent runs for the first time, it submits a certificate signing request (CSR) to the CA Puppet master. You must log into that server to check for and sign certificates. After an agent’s certificate is signed, it regularly fetches and applies configuration catalogs from the Puppet master.
+
+
+
+### Terraform
+
+> Terraform is an infrastructure-as-code software tool created by HashiCorp. Users define and provide data center infrastructure using a declarative configuration language known as HashiCorp Configuration Language, or optionally JSON. 
+
+```
+sudo zypper -n install terraform 
+```
+
 
 
 
