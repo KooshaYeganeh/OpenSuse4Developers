@@ -325,10 +325,9 @@ sudo zypper -n install lshw
 
 Simplified Package Manager for **openSUSE**
 
-‍‍‍```
+```
 wget https://codeload.github.com/KooshaYeganeh/suse/zip/refs/heads/main && unzip suse-main.zip && cd suse-main && ./Install && if [ -f "/opt/script/suse" ];then echo "suse Package Manager Installed [ OK ]" ; else echo "suse Package Manager is Not Installed [ ERROR ]" ;fi 
 ```
-‍‍‍
 
 
 
