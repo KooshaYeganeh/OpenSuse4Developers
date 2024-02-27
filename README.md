@@ -2912,7 +2912,7 @@ however this is in-build security rules which come with scap security guide.
 
 After running the above command, we will get an evaluation report which explicitly displays remote hosts details with pass and fail status of various security rules. 
 
-
+**openSCAP GitHub: https://github.com/OpenSCAP**
 
 #### Munin
 
