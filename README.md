@@ -1398,7 +1398,7 @@ cd /tmp && wget https://github.com/KooshaYeganeh/i3wm/archive/refs/heads/main.zi
 ![clamAV](https://logodix.com/logo/1583401.png)
 
 ```
-sudo zypper -n install pcre-devel clamav clamav-database clamav-nodb clamz
+sudo zypper -n install clamav
 ```
 
 **Updating virus database signatures**
@@ -2811,10 +2811,108 @@ zypper install zeek-lts
 ```
 
 
+
 [Zeek info](https://resources.infosecinstitute.com/topic/using-zeek-for-network-analysis-and-detections/)
 
 
-### Monitoring
+
+
+
+
+#### openSCAP
+
+
+
+**openSUSE Leap 15.5**
+
+to Install openSCAP on openSUSE Leap 15.5: 
+
+```
+zypper addrepo https://download.opensuse.org/repositories/security/15.5/security.repo
+```
+```
+zypper refresh
+```
+```
+zypper install openscap
+```
+
+then You need to download it from openscap project repository.
+
+```
+wget https://raw.githubusercontent.com/OpenSCAP/openscap/maint-1.2/utils/oscap-ssh
+
+```
+
+```
+sudo su -
+```
+```
+chmod 755 oscap-ssh
+```
+```
+mv -v oscap-ssh /usr/local/bin
+```
+```
+chown root:root /usr/local/bin/oscap-ssh
+```
+
+
+
+furthermore we need to make keyless by adding the public key to remote host.
+
+take the content of id_rsa.pub from home directory of user of the policy server. then go to the remote host and make authorized_keys file if not exists in home directory of user under .ssh and add whole content of id_rsa.pub of the policy server.
+
+after that give 600 rights to authorized_keys and 700 to .ssh directory, which is placed under home directory of user. 
+
+
+```
+chmod 700 /home/gopal/.ssh
+```
+
+```
+chmod 600 /home/gopal/.ssh/authorized_keys
+```
+
+Introduction to scap security guide
+
+scap security guide is a security policy that is written in scap document. it covers many areas of system security and provides best practices to check security audits in hosts.
+
+In addition, this guide consists of predefined rules and remediations scripts for target hosts.
+
+scap security guide with openscap can be used together to perform security audits in an automated way.
+
+It implements security guidelines recommended by respected authorities PCI DSS, STIG, and USGCB.
+
+Download this scap security guide from scap project repo and extract it.
+
+```
+wget https://github.com/ComplianceAsCode/content/releases/download/v0.1.50/scap-security-guide-0.1.50.zip
+```
+
+```
+unzip scap-security-guide-0.1.50.zip
+```
+
+Now we will perform vulnerability check with the collaboration of openscap and scap security guide content in another ubuntu host which has IP 192.168.1.104.
+Launching compliance test:
+
+```
+oscap-ssh gopal@192.168.1.104 22 xccdf eval --profile xccdf_org.ssgproject.content_profile_standard --report ~/192.168.1.104.html ~/Downloads/scap-security-guide-0.1.50/ssg-ubuntu1804-ds-1.2.xml
+
+```
+
+oscap-ssh: this is a script that allows us to ssh to the remote host to check the security audit.
+
+xccdf_org.ssgproject.content_profile_standard: this is a xccdf profile id(benchmark id) which is part of xccdf xml file.
+
+And this is the main xccdf file “ssg-ubuntu1804-ds-1.2.xml” which we would use to check the vulnerability of hosts.
+
+however this is in-build security rules which come with scap security guide.
+
+After running the above command, we will get an evaluation report which explicitly displays remote hosts details with pass and fail status of various security rules. 
+
+
 
 #### Munin
 
